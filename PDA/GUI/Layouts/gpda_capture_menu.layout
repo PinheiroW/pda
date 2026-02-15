@@ -1,0 +1,497 @@
+WindowWidgetClass rootFrame {
+ clipchildren 1
+ position 0.3 0.15
+ size 0.4 0.7
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ {
+  PanelWidgetClass Main {
+   visible 1
+   clipchildren 1
+   inheritalpha 0
+   color 0 0 0 0.88
+   position 0 0
+   size 1 1
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   style editor_quad_dark
+   {
+    PanelWidgetClass HeaderTitle {
+     ignorepointer 1
+     color 0 0 0 1
+     position 0 0
+     size 1 0.055
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style DayZDefaultPanel
+     {
+      TextWidgetClass Title {
+       ignorepointer 1
+       color 0.95 0.6 0.25 1
+       position 0.03 0
+       size 0.9 1
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text "TERRITORY CAPTURE"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 16
+       "text valign" center
+      }
+      ButtonWidgetClass BtnCloseX {
+       color 0.65 0.12 0.08 1
+       halign right_ref
+       position -5 2
+       size 30 22
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       style Editor
+       "no focus" 1
+       {
+        TextWidgetClass BtnCloseXTxt {
+         ignorepointer 1
+         color 1 0.5 0.4 1
+         size 1 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "X"
+         font "gui/fonts/metron"
+         "exact text" 1
+         "exact text size" 13
+         "text halign" center
+         "text valign" center
+        }
+       }
+      }
+     }
+    }
+    PanelWidgetClass LeftPanel {
+     ignorepointer 0
+     clipchildren 1
+     position 0 0.057
+     size 1 0.943
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     {
+      TextWidgetClass LblZoneInfo {
+       ignorepointer 1
+       color 0.85 0.35 0.15 1
+       position 0.05 0.01
+       size 0.9 0.04
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text "ZONE INFO"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 12
+      }
+      PanelWidgetClass ZoneDivider1 {
+       ignorepointer 1
+       color 1 0 0 0.2
+       position 0.05 0.055
+       size 0.9 0.001
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+      }
+      TextWidgetClass TxtZoneName {
+       ignorepointer 1
+       color 0.85 0.8 0.65 1
+       position 0.05 0.065
+       size 0.9 0.035
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text "Zone: ---"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 11
+      }
+      TextWidgetClass TxtCoords {
+       ignorepointer 1
+       color 0.5 0.5 0.5 1
+       position 0.05 0.1
+       size 0.9 0.035
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text "Pos: 0 / 0"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 10
+      }
+      TextWidgetClass TxtOwner {
+       ignorepointer 1
+       color 0.7 0.7 0.7 1
+       position 0.05 0.14
+       size 0.9 0.035
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text "Owner: ---"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 11
+      }
+      TextWidgetClass TxtYourGroup {
+       ignorepointer 1
+       color 0.4 0.8 0.4 1
+       position 0.05 0.18
+       size 0.9 0.035
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text "Your Group: ---"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 11
+      }
+      TextWidgetClass TxtReward {
+       ignorepointer 1
+       color 0.95 0.75 0.25 1
+       position 0.05 0.22
+       size 0.9 0.035
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text "Reward: 100 pts"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 11
+      }
+      PanelWidgetClass ZoneDivider2 {
+       ignorepointer 1
+       color 1 0 0 0.2
+       position 0.05 0.265
+       size 0.9 0.001
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+      }
+      TextWidgetClass LblFlag {
+       ignorepointer 1
+       color 0.85 0.35 0.15 1
+       position 0.05 0.275
+       size 0.9 0.04
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text "FLAG"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 12
+      }
+      TextWidgetClass TxtFlagInfo {
+       ignorepointer 1
+       color 0.85 0.8 0.65 1
+       position 0.05 0.32
+       size 0.9 0.035
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text "Flag on pole: NONE"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 11
+      }
+      PanelWidgetClass ZoneDivider3 {
+       ignorepointer 1
+       color 1 0 0 0.2
+       position 0.05 0.365
+       size 0.9 0.001
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+      }
+      TextWidgetClass LblCapture {
+       ignorepointer 1
+       color 0.85 0.35 0.15 1
+       position 0.05 0.375
+       size 0.9 0.04
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text "CAPTURE"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 12
+      }
+      TextWidgetClass TxtStatus {
+       ignorepointer 1
+       color 0.6 0.85 0.6 1
+       position 0.05 0.42
+       size 0.9 0.035
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text "Status: Ready"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 11
+      }
+      FrameWidgetClass ProgressBarFrame {
+       position 0.05 0.46
+       size 0.9 0.04
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       {
+        ImageWidgetClass ProgressBarBG {
+         ignorepointer 1
+         color 0.1 0.1 0.12 1
+         position 0 0
+         size 1 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+        }
+        ImageWidgetClass ProgressBarFill {
+         ignorepointer 1
+         color 0.85 0.35 0.15 1
+         position 0 0
+         size 0 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+        }
+       }
+      }
+      TextWidgetClass TxtProgressPct {
+       ignorepointer 1
+       color 0.85 0.8 0.65 1
+       position 0.05 0.505
+       size 0.4 0.03
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text "0%"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 10
+      }
+      TextWidgetClass TxtTimeLeft {
+       ignorepointer 1
+       color 0.85 0.8 0.65 1
+       position 0.5 0.505
+       size 0.45 0.03
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text "Time: --"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 10
+       "text halign" right
+      }
+      PanelWidgetClass ZoneDivider4 {
+       ignorepointer 1
+       color 1 0 0 0.2
+       position 0.05 0.545
+       size 0.9 0.001
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+      }
+      TextWidgetClass LblForces {
+       ignorepointer 1
+       color 0.85 0.35 0.15 1
+       position 0.05 0.555
+       size 0.9 0.04
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text "FORCES"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 12
+      }
+      TextWidgetClass TxtAttackers {
+       ignorepointer 1
+       color 0.9 0.45 0.3 1
+       position 0.05 0.6
+       size 0.9 0.03
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text "Attackers: 0"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 10
+      }
+      TextWidgetClass TxtDefenders {
+       ignorepointer 1
+       color 0.3 0.7 0.9 1
+       position 0.05 0.635
+       size 0.9 0.03
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text "Defenders: 0"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 10
+      }
+      TextWidgetClass TxtSpeedMod {
+       ignorepointer 1
+       color 0.85 0.8 0.65 1
+       position 0.05 0.67
+       size 0.9 0.03
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text "Speed: x1.0"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 10
+      }
+      PanelWidgetClass ZoneDivider5 {
+       ignorepointer 1
+       color 1 0 0 0.2
+       position 0.05 0.71
+       size 0.9 0.001
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+      }
+      TextWidgetClass TxtCaptureStatus {
+       ignorepointer 1
+       color 0.6 0.85 0.6 1
+       position 0.05 0.72
+       size 0.9 0.05
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text "Attach your group flag via TAB, then START"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 10
+      }
+      ButtonWidgetClass BtnStartCapture {
+       color 0.12 0.42 0.18 1
+       position 0.05 0.79
+       size 0.9 0.06
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Editor
+       "no focus" 1
+       {
+        TextWidgetClass BtnStartText {
+         ignorepointer 1
+         size 1 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "START CAPTURE"
+         font "gui/fonts/metron"
+         "exact text" 1
+         "exact text size" 13
+         "text halign" center
+         "text valign" center
+        }
+       }
+      }
+      ButtonWidgetClass BtnCancelCapture {
+       visible 0
+       color 0.65 0.09 0.09 1
+       position 0.05 0.79
+       size 0.9 0.06
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Editor
+       "no focus" 1
+       {
+        TextWidgetClass BtnCancelText {
+         ignorepointer 1
+         size 1 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "CANCEL CAPTURE"
+         font "gui/fonts/metron"
+         "exact text" 1
+         "exact text size" 13
+         "text halign" center
+         "text valign" center
+        }
+       }
+      }
+      ButtonWidgetClass BtnClose {
+       color 0.15 0.08 0.08 1
+       position 0.05 0.87
+       size 0.9 0.055
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Editor
+       "no focus" 1
+       {
+        TextWidgetClass BtnCloseText {
+         ignorepointer 1
+         color 0.8 0.8 0.8 1
+         size 1 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "CLOSE [ESC]"
+         font "gui/fonts/metron"
+         "exact text" 1
+         "exact text size" 11
+         "text halign" center
+         "text valign" center
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

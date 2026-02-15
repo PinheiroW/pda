@@ -1,0 +1,1515 @@
+FrameWidgetClass AdminNews_Root {
+ position 0 0
+ size 850 600
+ halign center_ref
+ valign center_ref
+ hexactpos 0
+ vexactpos 0
+ hexactsize 1
+ vexactsize 1
+ {
+  ImageWidgetClass Background {
+   ignorepointer 1
+   color 0.07 0.07 0.08 0.98
+   position 0 0
+   size 850 600
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+  }
+  
+  // ========== HEADER ==========
+  TextWidgetClass Title {
+   ignorepointer 1
+   color 1 1 1 1
+   position 20 12
+   size 400 30
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   text "ADMIN PANEL"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+   "text valign" center
+  }
+
+  TextWidgetClass XP_LblKills {
+   ignorepointer 1
+   color 0.9 0.5 0.3 1
+   position 20 135
+   size 360 18
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   text "ZOMBIE/ANIMAL XP (exact classname)"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 11
+  }
+
+  ImageWidgetClass XP_KillsListBg {
+   ignorepointer 1
+   color 0.05 0.05 0.06 1
+   position 20 155
+   size 360 315
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+  }
+
+  TextListboxWidgetClass XP_KillsList {
+   position 25 160
+   size 350 305
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   style DayZDefaultListbox
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+   "row height" 18
+  }
+
+  TextWidgetClass XP_LblKillEdit {
+   ignorepointer 1
+   color 0.6 0.6 0.65 1
+   position 410 135
+   size 420 18
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   text "EDIT KILL XP"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+
+  TextWidgetClass XP_LblKillClass {
+   ignorepointer 1
+   color 0.5 0.5 0.55 1
+   position 410 160
+   size 280 18
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   text "CLASSNAME (e.g. ZmbM_CitizenASkinny)"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 10
+  }
+
+  ImageWidgetClass XP_KillClassBg {
+   ignorepointer 1
+   color 0.05 0.05 0.06 1
+   position 410 180
+   size 280 35
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+  }
+
+  EditBoxWidgetClass XP_KillClass {
+   position 415 183
+   size 270 30
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   style DayZInputField
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+
+  TextWidgetClass XP_LblKillXP {
+   ignorepointer 1
+   color 0.5 0.5 0.55 1
+   position 705 160
+   size 125 18
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   text "XP"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+
+  ImageWidgetClass XP_KillXPBg {
+   ignorepointer 1
+   color 0.05 0.05 0.06 1
+   position 705 180
+   size 125 35
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+  }
+
+  EditBoxWidgetClass XP_KillXP {
+   position 710 183
+   size 115 30
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   style DayZInputField
+   text "0"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+
+  ButtonWidgetClass XP_BtnKillApply {
+   color 0.1 0.35 0.15 1
+   position 410 225
+   size 420 40
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   style DayZDefaultButton
+   text "ADD / UPDATE KILL"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 14
+  }
+
+  ButtonWidgetClass XP_BtnKillDelete {
+   color 0.4 0.1 0.1 1
+   position 410 270
+   size 420 30
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   style DayZDefaultButton
+   text "DELETE SELECTED KILL"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+
+  TextWidgetClass XP_LblItems {
+   ignorepointer 1
+   color 0.3 0.7 0.9 1
+   position 410 320
+   size 420 18
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   text "ITEM XP (pickup gives XP)"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 11
+  }
+
+  ButtonWidgetClass XP_BtnModeHands {
+   color 0.15 0.4 0.5 1
+   position 410 345
+   size 205 30
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   style DayZDefaultButton
+   text "MODE: HANDS"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+
+  ButtonWidgetClass XP_BtnModeInv {
+   color 0.15 0.4 0.5 1
+   position 625 345
+   size 205 30
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   style DayZDefaultButton
+   text "MODE: INVENTORY"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+
+  ImageWidgetClass XP_ItemsListBg {
+   ignorepointer 1
+   color 0.05 0.05 0.06 1
+   position 410 380
+   size 420 90
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+  }
+
+  TextListboxWidgetClass XP_ItemsList {
+   position 415 385
+   size 410 80
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   style DayZDefaultListbox
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+   "row height" 18
+  }
+
+  TextWidgetClass XP_LblItemClass {
+   ignorepointer 1
+   color 0.5 0.5 0.55 1
+   position 410 478
+   size 280 18
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   text "ITEM CLASSNAME (e.g. Apple)"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 10
+  }
+
+  ImageWidgetClass XP_ItemClassBg {
+   ignorepointer 1
+   color 0.05 0.05 0.06 1
+   position 410 498
+   size 280 35
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+  }
+
+  EditBoxWidgetClass XP_ItemClass {
+   position 415 501
+   size 270 30
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   style DayZInputField
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+
+  TextWidgetClass XP_LblItemXP {
+   ignorepointer 1
+   color 0.5 0.5 0.55 1
+   position 700 478
+   size 60 18
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   text "XP"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+
+  ImageWidgetClass XP_ItemXPBg {
+   ignorepointer 1
+   color 0.05 0.05 0.06 1
+   position 700 498
+   size 130 35
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+  }
+
+  EditBoxWidgetClass XP_ItemXP {
+   position 705 501
+   size 120 30
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   style DayZInputField
+   text "0"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+
+  ButtonWidgetClass XP_BtnItemApply {
+   color 0.1 0.35 0.15 1
+   position 410 540
+   size 210 35
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   style DayZDefaultButton
+   text "ADD / UPDATE ITEM"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+
+  ButtonWidgetClass XP_BtnItemDelete {
+   color 0.4 0.1 0.1 1
+   position 625 540
+   size 205 35
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   style DayZDefaultButton
+   text "DELETE SELECTED"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  TextWidgetClass Version {
+   ignorepointer 1
+   color 0.4 0.4 0.45 1
+   position 720 12
+   size 110 30
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   text "v2.0"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+   "text halign" right
+   "text valign" center
+  }
+  
+  // Close Button
+  ButtonWidgetClass Btn_Close {
+   color 0.4 0.1 0.1 1
+   position 810 12
+   size 30 30
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style DayZDefaultButton
+   text "X"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 18
+  }
+  
+  // ========== TAB BUTTONS ==========
+  ButtonWidgetClass Tab_Ranks {
+   color 0.15 0.4 0.5 1
+   position 20 50
+   size 190 35
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style DayZDefaultButton
+   text "RANK MANAGEMENT"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  ButtonWidgetClass Tab_Tickets {
+   color 0.15 0.4 0.5 1
+   position 215 50
+   size 190 35
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style DayZDefaultButton
+   text "TICKET TOOLS"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  ButtonWidgetClass Tab_Zones {
+   color 0.15 0.4 0.5 1
+   position 410 50
+   size 190 35
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style DayZDefaultButton
+   text "CAPTURE ZONES"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+
+  ButtonWidgetClass Tab_XP {
+   color 0.15 0.4 0.5 1
+   position 605 50
+   size 190 35
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style DayZDefaultButton
+   text "XP SETTINGS"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  // ========== SECTION 1: RANK MANAGEMENT ==========
+
+  TextWidgetClass XP_LblTitle {
+   ignorepointer 1
+   color 0.9 0.9 0.95 1
+   position 20 95
+   size 810 30
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   text "XP SETTINGS"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 16
+   "text valign" center
+  }
+  
+  // Rank Name
+  TextWidgetClass Rank_LblName {
+   ignorepointer 1
+   color 0.5 0.5 0.55 1
+   position 20 95
+   size 360 18
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 1
+   text "RANK NAME"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  ImageWidgetClass Rank_InputNameBg {
+   ignorepointer 1
+   color 0.05 0.05 0.06 1
+   position 20 115
+   size 360 35
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 1
+  }
+  
+  EditBoxWidgetClass Rank_Input_Name {
+   position 25 118
+   size 350 30
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 1
+   style DayZInputField
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  // Required XP
+  TextWidgetClass Rank_LblXP {
+   ignorepointer 1
+   color 0.5 0.5 0.55 1
+   position 20 160
+   size 170 18
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 1
+   text "REQUIRED XP"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  ImageWidgetClass Rank_InputXPBg {
+   ignorepointer 1
+   color 0.05 0.05 0.06 1
+   position 20 180
+   size 170 35
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 1
+  }
+  
+  EditBoxWidgetClass Rank_Input_XP {
+   position 25 183
+   size 160 30
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 1
+   style DayZInputField
+   text "0"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  // Sequence (ID)
+  TextWidgetClass Rank_LblSequence {
+   ignorepointer 1
+   color 0.5 0.5 0.55 1
+   position 210 160
+   size 170 18
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 1
+   text "SEQUENCE (ID)"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  ImageWidgetClass Rank_InputSequenceBg {
+   ignorepointer 1
+   color 0.05 0.05 0.06 1
+   position 210 180
+   size 170 35
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 1
+  }
+  
+  EditBoxWidgetClass Rank_Input_Sequence {
+   position 215 183
+   size 160 30
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 1
+   style DayZInputField
+   text "1"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  // Permissions
+  TextWidgetClass Rank_LblPermissions {
+   ignorepointer 1
+   color 0.5 0.5 0.55 1
+   position 20 230
+   size 360 18
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 1
+   text "PERMISSIONS"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  ImageWidgetClass Rank_InputPermissionsBg {
+   ignorepointer 1
+   color 0.05 0.05 0.06 1
+   position 20 250
+   size 360 240
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 1
+  }
+  
+  MultilineEditBoxWidgetClass Rank_Input_Permissions {
+   position 25 255
+   size 350 230
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 1
+   style DayZInputField
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  // Create Rank Button
+  ButtonWidgetClass Rank_Btn_Create {
+   color 0.1 0.35 0.15 1
+   position 20 505
+   size 360 50
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 1
+   style DayZDefaultButton
+   text "CREATE RANK"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 18
+  }
+  
+  // Rank List
+  TextWidgetClass Rank_LblRanks {
+   ignorepointer 1
+   color 0.5 0.5 0.55 1
+   position 410 95
+   size 420 18
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 1
+   text "EXISTING RANKS"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  TextWidgetClass Rank_ColName {
+   ignorepointer 1
+   color 0.6 0.6 0.65 1
+   position 410 118
+   size 160 20
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 1
+   text "Name"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  TextWidgetClass Rank_ColXP {
+   ignorepointer 1
+   color 0.6 0.6 0.65 1
+   position 580 118
+   size 130 20
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 1
+   text "Required XP"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  TextWidgetClass Rank_ColID {
+   ignorepointer 1
+   color 0.6 0.6 0.65 1
+   position 720 118
+   size 110 20
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 1
+   text "ID"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+   "text halign" right
+  }
+  
+  ImageWidgetClass Rank_ListBg {
+   ignorepointer 1
+   color 0.05 0.05 0.06 1
+   position 410 140
+   size 420 400
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 1
+  }
+  
+  TextListboxWidgetClass Rank_RankList {
+   position 410 140
+   size 420 350
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 1
+   style DayZDefaultListbox
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+   "row height" 18
+  }
+  
+  ButtonWidgetClass Rank_Btn_Edit {
+   color 0.15 0.4 0.5 1
+   position 410 495
+   size 420 50
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 1
+   style DayZDefaultButton
+   text "EDIT RANK"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 18
+  }
+  
+  ButtonWidgetClass Rank_Btn_Delete {
+   color 0.4 0.1 0.1 1
+   position 410 550
+   size 420 30
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 1
+   style DayZDefaultButton
+   text "DELETE RANK"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  // ========== SECTION 2: TICKET TOOLS ==========
+  
+  TextWidgetClass Ticket_LblTickets {
+   ignorepointer 1
+   color 0.5 0.5 0.55 1
+   position 20 95
+   size 360 18
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   text "OPEN TICKETS"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  ImageWidgetClass Ticket_TicketListBg {
+   ignorepointer 1
+   color 0.05 0.05 0.06 1
+   position 20 115
+   size 360 400
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+  }
+  
+  ScrollWidgetClass Ticket_TicketListScroll {
+   position 25 120
+   size 350 390
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   style Default
+   "Scrollbar V" 1
+   {
+    WrapSpacerWidgetClass Ticket_TicketListContent {
+     position 0 0
+     size 1 1
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+    }
+   }
+  }
+  
+  ButtonWidgetClass Ticket_Btn_Refresh {
+   color 0.15 0.4 0.5 1
+   position 20 525
+   size 360 40
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   style DayZDefaultButton
+   text "REFRESH LIST"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 18
+  }
+  
+  TextWidgetClass Ticket_LblTicketDetails {
+   ignorepointer 1
+   color 0.5 0.5 0.55 1
+   position 410 95
+   size 420 18
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   text "TICKET DETAILS"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  TextWidgetClass Ticket_LblTicketTitle {
+   ignorepointer 1
+   color 0.6 0.6 0.65 1
+   position 410 118
+   size 420 20
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   text "Title:"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  TextWidgetClass Ticket_TicketTitle {
+   ignorepointer 1
+   color 1 1 1 1
+   position 410 138
+   size 420 20
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   text "[Select a ticket to view details]"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  TextWidgetClass Ticket_LblTicketDesc {
+   ignorepointer 1
+   color 0.6 0.6 0.65 1
+   position 410 168
+   size 420 20
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   text "Description:"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  ImageWidgetClass Ticket_TicketDescBg {
+   ignorepointer 1
+   color 0.05 0.05 0.06 1
+   position 410 188
+   size 420 200
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+  }
+  
+  ScrollWidgetClass Ticket_TicketDescScroll {
+   position 420 198
+   size 400 180
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   style Default
+   "Scrollbar V" 1
+   {
+    TextWidgetClass Ticket_TicketDescription {
+     ignorepointer 1
+     color 0.9 0.9 0.9 1
+     position 0 0
+     size 400 180
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     text ""
+     font "gui/fonts/metron"
+     "exact text" 1
+     "exact text size" 12
+     "text valign" top
+    }
+   }
+  }
+  
+  TextWidgetClass Ticket_LblResponse {
+   ignorepointer 1
+   color 0.6 0.6 0.65 1
+   position 410 398
+   size 420 20
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   text "Admin Response:"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  ImageWidgetClass Ticket_InputResponseBg {
+   ignorepointer 1
+   color 0.05 0.05 0.06 1
+   position 410 418
+   size 420 100
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+  }
+  
+  MultilineEditBoxWidgetClass Ticket_Input_Response {
+   position 420 428
+   size 400 80
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   style DayZInputField
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  ButtonWidgetClass Ticket_Btn_Reply {
+   color 0.1 0.35 0.15 1
+   position 410 525
+   size 205 50
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   style DayZDefaultButton
+   text "SEND"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 18
+  }
+  
+  ButtonWidgetClass Ticket_Btn_CloseTicket {
+   color 0.4 0.1 0.1 1
+   position 625 525
+   size 205 50
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   style DayZDefaultButton
+   text "CLOSE"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 18
+  }
+  
+  // ========== SECTION 3: CAPTURE ZONES ==========
+  
+  TextWidgetClass Zone_LblName {
+   ignorepointer 1
+   color 0.5 0.5 0.55 1
+   position 20 95
+   size 360 18
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   text "ZONE NAME"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  ImageWidgetClass Zone_InputNameBg {
+   ignorepointer 1
+   color 0.05 0.05 0.06 1
+   position 20 115
+   size 360 35
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+  }
+  
+  EditBoxWidgetClass Zone_Input_Name {
+   position 25 118
+   size 350 30
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   style DayZInputField
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  TextWidgetClass Zone_LblCoords {
+   ignorepointer 1
+   color 0.5 0.5 0.55 1
+   position 20 160
+   size 360 18
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   text "COORDINATES (X Y Z)"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  ImageWidgetClass Zone_InputCoordsBg {
+   ignorepointer 1
+   color 0.05 0.05 0.06 1
+   position 20 180
+   size 270 35
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+  }
+  
+  EditBoxWidgetClass Zone_Input_Coords {
+   position 25 183
+   size 260 30
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   style DayZInputField
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  ButtonWidgetClass Zone_Btn_GetPos {
+   color 0.15 0.4 0.5 1
+   position 300 180
+   size 80 35
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   style DayZDefaultButton
+   text "GET"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  TextWidgetClass Zone_LblRadius {
+   ignorepointer 1
+   color 0.5 0.5 0.55 1
+   position 20 230
+   size 170 18
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   text "RADIUS (M)"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  ImageWidgetClass Zone_InputRadiusBg {
+   ignorepointer 1
+   color 0.05 0.05 0.06 1
+   position 20 250
+   size 170 35
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+  }
+  
+  EditBoxWidgetClass Zone_Input_Radius {
+   position 25 253
+   size 160 30
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   style DayZInputField
+   text "50"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  TextWidgetClass Zone_LblPoints {
+   ignorepointer 1
+   color 0.5 0.5 0.55 1
+   position 210 230
+   size 170 18
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   text "REWARD POINTS"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  ImageWidgetClass Zone_InputPointsBg {
+   ignorepointer 1
+   color 0.05 0.05 0.06 1
+   position 210 250
+   size 170 35
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+  }
+  
+  EditBoxWidgetClass Zone_Input_Points {
+   position 215 253
+   size 160 30
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   style DayZInputField
+   text "100"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  TextWidgetClass Zone_LblOwner {
+   ignorepointer 1
+   color 0.5 0.5 0.55 1
+   position 20 300
+   size 360 18
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   text "CURRENT OWNER/FACTION"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  ImageWidgetClass Zone_InputOwnerBg {
+   ignorepointer 1
+   color 0.05 0.05 0.06 1
+   position 20 320
+   size 360 35
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+  }
+  
+  ButtonWidgetClass Zone_Btn_SelectOwner {
+   color 0.6 0.3 0.8 1
+   position 25 323
+   size 350 30
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   style DayZDefaultButton
+   text "Select Owner/Faction"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  TextWidgetClass Zone_LblContainer {
+   ignorepointer 1
+   color 0.5 0.5 0.55 1
+   position 20 365
+   size 360 18
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   text "CONTAINER TYPE"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  ImageWidgetClass Zone_InputContainerBg {
+   ignorepointer 1
+   color 0.05 0.05 0.06 1
+   position 20 385
+   size 360 35
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+  }
+  
+  ButtonWidgetClass Zone_Btn_SelectContainer {
+   color 0.6 0.3 0.8 1
+   position 25 388
+   size 350 30
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   style DayZDefaultButton
+   text "Select Container Type"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  ButtonWidgetClass Zone_Btn_Create {
+   color 0.1 0.35 0.15 1
+   position 20 460
+   size 360 40
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   style DayZDefaultButton
+   text "CREATE ZONE"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 14
+  }
+  
+  ButtonWidgetClass Zone_Btn_Save {
+   color 0.15 0.4 0.5 1
+   position 20 505
+   size 360 40
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   style DayZDefaultButton
+   text "SAVE CHANGES"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 14
+  }
+  
+  TextWidgetClass Zone_LblZones {
+   ignorepointer 1
+   color 0.5 0.5 0.55 1
+   position 410 95
+   size 420 18
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   text "EXISTING ZONES"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  TextWidgetClass Zone_ColName {
+   ignorepointer 1
+   color 0.6 0.6 0.65 1
+   position 410 118
+   size 160 20
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   text "Name"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  TextWidgetClass Zone_ColOwner {
+   ignorepointer 1
+   color 0.6 0.6 0.65 1
+   position 580 118
+   size 130 20
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   text "Owner"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+  
+  TextWidgetClass Zone_ColPoints {
+   ignorepointer 1
+   color 0.6 0.6 0.65 1
+   position 720 118
+   size 110 20
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   text "Points"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+   "text halign" right
+  }
+  
+  ImageWidgetClass Zone_ListBg {
+   ignorepointer 1
+   color 0.05 0.05 0.06 1
+   position 410 140
+   size 420 400
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+  }
+  
+  TextListboxWidgetClass Zone_ZoneList {
+   position 410 140
+   size 420 350
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   style DayZDefaultListbox
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+   "row height" 18
+  }
+  
+  ButtonWidgetClass Zone_Btn_Edit {
+   color 0.15 0.4 0.5 1
+   position 410 495
+   size 420 50
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   style DayZDefaultButton
+   text "EDIT ZONE"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 18
+  }
+  
+  ButtonWidgetClass Zone_Btn_Delete {
+   color 0.4 0.1 0.1 1
+   position 410 550
+   size 420 30
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   visible 0
+   style DayZDefaultButton
+   text "DELETE ZONE"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 12
+  }
+ }
+}

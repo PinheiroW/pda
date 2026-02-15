@@ -1,0 +1,322 @@
+FrameWidgetClass RankManagement_Root {
+ position 0 0
+ size 850 600
+ halign center_ref
+ valign center_ref
+ hexactpos 0
+ vexactpos 0
+ hexactsize 1
+ vexactsize 1
+ {
+  ImageWidgetClass Background {
+   ignorepointer 1
+   color 0.07 0.07 0.08 0.98
+   position 0 0
+   size 850 600
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+  }
+  
+  // ========== HEADER ==========
+  TextWidgetClass Title {
+   ignorepointer 1
+   color 1 1 1 1
+   position 20 12
+   size 400 30
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   text "RANK MANAGEMENT"
+   font "gui/fonts/klavika"
+   "text valign" center
+  }
+  
+  TextWidgetClass Version {
+   ignorepointer 1
+   color 0.4 0.4 0.45 1
+   position 720 12
+   size 110 30
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   text "v2.0"
+   font "gui/fonts/klavika"
+   "text halign" right
+   "text valign" center
+  }
+  
+  // ========== LEFT PANEL - FORM ==========
+  
+  // Rank Name
+  TextWidgetClass LblName {
+   ignorepointer 1
+   color 0.5 0.5 0.55 1
+   position 20 55
+   size 360 18
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   text "RANK NAME"
+   font "gui/fonts/klavika"
+  }
+  
+  ImageWidgetClass InputNameBg {
+   ignorepointer 1
+   color 0.05 0.05 0.06 1
+   position 20 75
+   size 360 35
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+  }
+  
+  EditBoxWidgetClass Input_Name {
+   position 25 78
+   size 350 30
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style DayZInputField
+   font "gui/fonts/klavika"
+  }
+  
+  // Required XP
+  TextWidgetClass LblXP {
+   ignorepointer 1
+   color 0.5 0.5 0.55 1
+   position 20 120
+   size 170 18
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   text "REQUIRED XP"
+   font "gui/fonts/klavika"
+  }
+  
+  ImageWidgetClass InputXPBg {
+   ignorepointer 1
+   color 0.05 0.05 0.06 1
+   position 20 140
+   size 170 35
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+  }
+  
+  EditBoxWidgetClass Input_XP {
+   position 25 143
+   size 160 30
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style DayZInputField
+   text "0"
+   font "gui/fonts/klavika"
+  }
+  
+  // Sequence (ID)
+  TextWidgetClass LblSequence {
+   ignorepointer 1
+   color 0.5 0.5 0.55 1
+   position 210 120
+   size 170 18
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   text "SEQUENCE (ID)"
+   font "gui/fonts/klavika"
+  }
+  
+  ImageWidgetClass InputSequenceBg {
+   ignorepointer 1
+   color 0.05 0.05 0.06 1
+   position 210 140
+   size 170 35
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+  }
+  
+  EditBoxWidgetClass Input_Sequence {
+   position 215 143
+   size 160 30
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style DayZInputField
+   text "1"
+   font "gui/fonts/klavika"
+  }
+  
+  // Permissions
+  TextWidgetClass LblPermissions {
+   ignorepointer 1
+   color 0.5 0.5 0.55 1
+   position 20 190
+   size 360 18
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   text "PERMISSIONS"
+   font "gui/fonts/klavika"
+  }
+  
+  ImageWidgetClass InputPermissionsBg {
+   ignorepointer 1
+   color 0.05 0.05 0.06 1
+   position 20 210
+   size 360 240
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+  }
+  
+  MultilineEditBoxWidgetClass Input_Permissions {
+   position 25 215
+   size 350 230
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style DayZInputField
+   font "gui/fonts/klavika"
+  }
+  
+  // Create Button
+  ButtonWidgetClass Btn_Create {
+   color 0.1 0.35 0.15 1
+   position 20 515
+   size 360 50
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style DayZDefaultButton
+   text "CREATE RANK"
+   font "gui/fonts/klavika18"
+  }
+  
+  // ========== RIGHT PANEL - LIST ==========
+  
+  TextWidgetClass LblRanks {
+   ignorepointer 1
+   color 0.5 0.5 0.55 1
+   position 410 55
+   size 420 18
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   text "EXISTING RANKS"
+   font "gui/fonts/klavika"
+  }
+  
+  // Column Headers
+  TextWidgetClass ColName {
+   ignorepointer 1
+   color 0.6 0.6 0.65 1
+   position 410 78
+   size 160 20
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   text "Name"
+   font "gui/fonts/klavika"
+  }
+  
+  TextWidgetClass ColXP {
+   ignorepointer 1
+   color 0.6 0.6 0.65 1
+   position 580 78
+   size 130 20
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   text "Required XP"
+   font "gui/fonts/klavika"
+  }
+  
+  TextWidgetClass ColID {
+   ignorepointer 1
+   color 0.6 0.6 0.65 1
+   position 720 78
+   size 110 20
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   text "ID"
+   font "gui/fonts/klavika"
+   "text halign" right
+  }
+  
+  // Rank List
+  ImageWidgetClass ListBg {
+   ignorepointer 1
+   color 0.05 0.05 0.06 1
+   position 410 100
+   size 420 450
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+  }
+  
+  TextListboxWidgetClass RankList {
+   position 410 100
+   size 420 400
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style DayZDefaultListbox
+   font "gui/fonts/klavika"
+ "exact text" 1
+ "exact text size" 12
+ "row height" 18
+  // Edit Button
+  ButtonWidgetClass Btn_Edit {
+   color 0.15 0.4 0.5 1
+   position 410 505
+   size 420 50
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style DayZDefaultButton
+   text "EDIT RANK"
+   font "gui/fonts/klavika18"
+  }
+  
+  // Delete Button
+  ButtonWidgetClass Btn_Delete {
+   color 0.4 0.1 0.1 1
+   position 410 560
+   size 420 30
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style DayZDefaultButton
+   text "DELETE RANK"
+   font "gui/fonts/klavika"
+  }
+ }
+}

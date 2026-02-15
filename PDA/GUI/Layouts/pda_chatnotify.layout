@@ -1,0 +1,122 @@
+FrameWidgetClass GPDA_ChatNotifyRoot {
+ position 0.01 0.06
+ size 0.42 0.14
+ halign left_ref
+ valign top_ref
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ {
+  FrameWidgetClass GPDA_ChatNotifyLine0 {
+   position 0 0
+   size 1 0.30
+   visible 0
+   {
+    ImageWidgetClass GPDA_ChatNotifyLine0Bg {
+     ignorepointer 1
+     color 0.02 0.025 0.03 0.88
+     position 0 0
+     size 1 1
+    }
+    ImageWidgetClass GPDA_ChatNotifyLine0Border {
+     ignorepointer 1
+     color 0.2 0.75 0.45 0.7
+     position 0 0
+     size 2 1
+     hexactpos 1
+     vexactpos 0
+     hexactsize 1
+     vexactsize 0
+    }
+    TextWidgetClass GPDA_ChatNotifyLine0Text {
+     ignorepointer 1
+     color 0.85 0.92 0.85 1
+     position 0.02 0.08
+     size 0.96 0.84
+     text ""
+     font "gui/fonts/metron"
+     "exact text" 1
+     "exact text size" 12
+     "text valign" center
+    }
+   }
+  }
+
+  FrameWidgetClass GPDA_ChatNotifyLine1 {
+   position 0 0.34
+   size 1 0.30
+   visible 0
+   {
+    ImageWidgetClass GPDA_ChatNotifyLine1Bg {
+     ignorepointer 1
+     color 0.02 0.025 0.03 0.88
+     position 0 0
+     size 1 1
+    }
+    ImageWidgetClass GPDA_ChatNotifyLine1Border {
+     ignorepointer 1
+     color 0.2 0.75 0.45 0.7
+     position 0 0
+     size 2 1
+     hexactpos 1
+     vexactpos 0
+     hexactsize 1
+     vexactsize 0
+    }
+    TextWidgetClass GPDA_ChatNotifyLine1Text {
+     ignorepointer 1
+     color 0.85 0.92 0.85 1
+     position 0.02 0.08
+     size 0.96 0.84
+     text ""
+     font "gui/fonts/metron"
+     "exact text" 1
+     "exact text size" 12
+     "text valign" center
+    }
+   }
+  }
+
+  FrameWidgetClass GPDA_ChatNotifyLine2 {
+   position 0 0.68
+   size 1 0.30
+   visible 0
+   {
+    ImageWidgetClass GPDA_ChatNotifyLine2Bg {
+     ignorepointer 1
+     color 0.02 0.025 0.03 0.88
+     position 0 0
+     size 1 1
+    }
+    ImageWidgetClass GPDA_ChatNotifyLine2Border {
+     ignorepointer 1
+     color 0.2 0.75 0.45 0.7
+     position 0 0
+     size 2 1
+     hexactpos 1
+     vexactpos 0
+     hexactsize 1
+     vexactsize 0
+    }
+    TextWidgetClass GPDA_ChatNotifyLine2Text {
+     ignorepointer 1
+     color 0.85 0.92 0.85 1
+     position 0.02 0.08
+     size 0.96 0.84
+     text ""
+     font "gui/fonts/metron"
+     "exact text" 1
+     "exact text size" 12
+     "text valign" center
+    }
+   }
+  }
+
+  FrameWidgetClass GPDA_ChatNotifyLine3 {
+   position 0 0
+   size 0 0
+   visible 0
+  }
+ }
+}

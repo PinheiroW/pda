@@ -1,0 +1,357 @@
+FrameWidgetClass rootFrame {
+ position 0 0
+ size 850 600
+ hexactpos 1
+ vexactpos 1
+ hexactsize 1
+ vexactsize 1
+ {
+  ImageWidgetClass Background {
+   ignorepointer 1
+   color 0.07 0.07 0.08 0.98
+   position 0 0
+   size 850 600
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+  }
+  
+  // ========== HEADER ==========
+  TextWidgetClass Title {
+   ignorepointer 1
+   color 1 1 1 1
+   position 20 12
+   size 400 30
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   text "CAPTURE ZONE EDITOR"
+   font "gui/fonts/klavika"
+   "text valign" center
+  }
+  
+  TextWidgetClass Version {
+   ignorepointer 1
+   color 0.4 0.4 0.45 1
+   position 720 12
+   size 110 30
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   text "v2.0"
+   font "gui/fonts/klavika"
+   "text halign" right
+   "text valign" center
+  }
+  
+  // ========== LEFT PANEL - FORM ==========
+  
+  // Zone Name
+  TextWidgetClass LblName {
+   ignorepointer 1
+   color 0.5 0.5 0.55 1
+   position 20 55
+   size 360 18
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   text "ZONE NAME"
+   font "gui/fonts/klavika"
+  }
+  
+  ImageWidgetClass InputNameBg {
+   ignorepointer 1
+   color 0.05 0.05 0.06 1
+   position 20 75
+   size 360 35
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+  }
+  
+  EditBoxWidgetClass Input_Name {
+   position 25 78
+   size 350 30
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style DayZInputField
+   font "gui/fonts/klavika"
+  }
+  
+  // Coordinates
+  TextWidgetClass LblCoords {
+   ignorepointer 1
+   color 0.5 0.5 0.55 1
+   position 20 120
+   size 360 18
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   text "COORDINATES (X Y Z)"
+   font "gui/fonts/klavika"
+  }
+  
+  ImageWidgetClass InputCoordsBg {
+   ignorepointer 1
+   color 0.05 0.05 0.06 1
+   position 20 140
+   size 270 35
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+  }
+  
+  EditBoxWidgetClass Input_Coords {
+   position 25 143
+   size 260 30
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style DayZInputField
+   font "gui/fonts/klavika"
+  }
+  
+  ButtonWidgetClass Btn_GetPos {
+   color 0.15 0.4 0.5 1
+   position 300 140
+   size 80 35
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style DayZDefaultButton
+   text "GET"
+   font "gui/fonts/klavika"
+  }
+  
+  // Radius
+  TextWidgetClass LblRadius {
+   ignorepointer 1
+   color 0.5 0.5 0.55 1
+   position 20 190
+   size 170 18
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   text "RADIUS (M)"
+   font "gui/fonts/klavika"
+  }
+  
+  ImageWidgetClass InputRadiusBg {
+   ignorepointer 1
+   color 0.05 0.05 0.06 1
+   position 20 210
+   size 170 35
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+  }
+  
+  EditBoxWidgetClass Input_Radius {
+   position 25 213
+   size 160 30
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style DayZInputField
+   text "50"
+   font "gui/fonts/klavika"
+  }
+  
+  // Points
+  TextWidgetClass LblPoints {
+   ignorepointer 1
+   color 0.5 0.5 0.55 1
+   position 210 190
+   size 170 18
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   text "REWARD POINTS"
+   font "gui/fonts/klavika"
+  }
+  
+  ImageWidgetClass InputPointsBg {
+   ignorepointer 1
+   color 0.05 0.05 0.06 1
+   position 210 210
+   size 170 35
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+  }
+  
+  EditBoxWidgetClass Input_Points {
+   position 215 213
+   size 160 30
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style DayZInputField
+   text "100"
+   font "gui/fonts/klavika"
+  }
+  
+  // Loot Items
+  TextWidgetClass LblLoot {
+   ignorepointer 1
+   color 0.5 0.5 0.55 1
+   position 20 260
+   size 360 18
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   text "REWARD ITEMS (Classnames)"
+   font "gui/fonts/klavika"
+  }
+  
+  ImageWidgetClass InputLootBg {
+   ignorepointer 1
+   color 0.05 0.05 0.06 1
+   position 20 280
+   size 360 220
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+  }
+  
+  MultilineEditBoxWidgetClass Input_Loot {
+   position 25 285
+   size 350 210
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style DayZInputField
+   font "gui/fonts/klavika"
+  }
+  
+  // Create Button
+  ButtonWidgetClass Btn_Create {
+   color 0.1 0.35 0.15 1
+   position 20 515
+   size 360 50
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style DayZDefaultButton
+   text "CREATE ZONE"
+   font "gui/fonts/klavika18"
+  }
+  
+  // ========== RIGHT PANEL - LIST ==========
+  
+  TextWidgetClass LblZones {
+   ignorepointer 1
+   color 0.5 0.5 0.55 1
+   position 410 55
+   size 420 18
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   text "EXISTING ZONES"
+   font "gui/fonts/klavika"
+  }
+  
+  // Column Headers
+  TextWidgetClass ColName {
+   ignorepointer 1
+   color 0.6 0.6 0.65 1
+   position 410 78
+   size 160 20
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   text "Name"
+   font "gui/fonts/klavika"
+  }
+  
+  TextWidgetClass ColOwner {
+   ignorepointer 1
+   color 0.6 0.6 0.65 1
+   position 580 78
+   size 130 20
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   text "Owner"
+   font "gui/fonts/klavika"
+  }
+  
+  TextWidgetClass ColPoints {
+   ignorepointer 1
+   color 0.6 0.6 0.65 1
+   position 720 78
+   size 110 20
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   text "Points"
+   font "gui/fonts/klavika"
+   "text halign" right
+  }
+  
+  // Zone List
+  ImageWidgetClass ListBg {
+   ignorepointer 1
+   color 0.05 0.05 0.06 1
+   position 410 100
+   size 420 450
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+  }
+  
+  TextListboxWidgetClass ZoneList {
+   position 410 100
+   size 420 400
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style DayZDefaultListbox
+   font "gui/fonts/klavika"
+   "exact text" 1
+   "exact text size" 12
+   "row height" 18
+  }
+  
+  // Delete Button
+  ButtonWidgetClass Btn_Delete {
+   color 0.4 0.1 0.1 1
+   position 410 515
+   size 420 50
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style DayZDefaultButton
+   text "DELETE ZONE"
+   font "gui/fonts/klavika18"
+  }
+ }
+}

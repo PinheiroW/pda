@@ -1,0 +1,67 @@
+PanelWidgetClass ZoneRow {
+ size 1 32
+ hexactsize 0
+ vexactsize 1
+ {
+  PanelWidgetClass ZoneRowBG {
+   ignorepointer 0
+   color 0 0 0 0
+   position 0 0
+   size 1 1
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   style editor_quad_dark
+  }
+  PanelWidgetClass StatusDot {
+   ignorepointer 1
+   color 0.15 0.65 0.25 1
+   position 0.04 0.3
+   size 0.05 0.4
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+  }
+  TextWidgetClass ZoneRowName {
+   ignorepointer 1
+   position 0.12 0
+   size 0.55 1
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   text "Zone Name"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 11
+   "text valign" center
+  }
+  TextWidgetClass ZoneRowInfo {
+   ignorepointer 1
+   position 0.65 0
+   size 0.32 1
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   text "0 pts"
+   font "gui/fonts/metron"
+   "exact text" 1
+   "exact text size" 9
+   "text halign" right
+   "text valign" center
+  }
+  PanelWidgetClass ZoneRowDiv {
+   ignorepointer 1
+   color 1 1 1 0.06
+   position 0 0.93
+   size 1 0.001
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+  }
+ }
+}

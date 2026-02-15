@@ -1,0 +1,1295 @@
+WindowWidgetClass rootFrame {
+ clipchildren 1
+ color 1 0 0 1
+ position 0.08 0.05
+ size 0.84 0.90
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ {
+  PanelWidgetClass Main {
+   visible 1
+   clipchildren 1
+   inheritalpha 0
+   color 0 0 0 0.88
+   position 0 0
+   size 1 1
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   style editor_quad_dark
+   {
+    PanelWidgetClass LeftPanel {
+     ignorepointer 0
+     clipchildren 1
+     position 0 0.038
+     size 0.18 0.962
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     {
+      PanelWidgetClass GroupsSectionHdr {
+       ignorepointer 1
+       color 0 0 0 1
+       position 0.02 0
+       size 0.96 0.05
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style editor_quad_dark
+       {
+        TextWidgetClass GroupsSectionTitle {
+         ignorepointer 1
+         size 1 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "GROUPS"
+         font "gui/fonts/metron"
+         "exact text" 1
+         "exact text size" 12
+         "text halign" center
+         "text valign" center
+        }
+       }
+      }
+      ScrollWidgetClass GroupScroll {
+       position 0.02 0.06
+       size 0.96 0.60
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       "Scrollbar V" 1
+       {
+        GridSpacerWidgetClass GroupList {
+         position 0 0
+         size 0.98 0
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+         Padding 1
+         Margin 1
+         "Size To Content V" 1
+         Columns 1
+         Rows 30
+        }
+       }
+      }
+      ButtonWidgetClass BtnNewGroup {
+       color 0.12 0.42 0.18 1
+       position 0.02 0.675
+       size 0.96 0.055
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Editor
+       "no focus" 1
+       {
+        TextWidgetClass TxtBtnNew {
+         ignorepointer 1
+         size 1 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "+ NEW GROUP"
+         font "gui/fonts/metron"
+         "exact text" 1
+         "exact text size" 11
+         "text halign" center
+         "text valign" center
+        }
+       }
+      }
+      ButtonWidgetClass BtnDeleteGroup {
+       color 0.65 0.09 0.09 1
+       position 0.02 0.74
+       size 0.96 0.055
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Editor
+       "no focus" 1
+       {
+        TextWidgetClass TxtBtnDel {
+         ignorepointer 1
+         size 1 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "DELETE GROUP"
+         font "gui/fonts/metron"
+         "exact text" 1
+         "exact text size" 11
+         "text halign" center
+         "text valign" center
+        }
+       }
+      }
+      PanelWidgetClass BottomDivider {
+       ignorepointer 1
+       color 1 0 0 0.2
+       position 0.03 0.805
+       size 0.94 0.001
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+      }
+      TextWidgetClass StatsText {
+       ignorepointer 1
+       position 0.04 0.815
+       size 0.92 0.025
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text "Groups: 0 | Members: 0"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 9
+       "text valign" center
+      }
+      PanelWidgetClass ActionDivider {
+       ignorepointer 1
+       color 1 0 0 0.2
+       position 0.03 0.845
+       size 0.94 0.001
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+      }
+      ButtonWidgetClass BtnReloadGroups {
+       color 0.1 0.3 0.5 1
+       position 0.02 0.855
+       size 0.96 0.055
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Editor
+       "no focus" 1
+       {
+        TextWidgetClass TxtReload {
+         ignorepointer 1
+         size 1 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "RELOAD"
+         font "gui/fonts/metron"
+         "exact text" 1
+         "exact text size" 10
+         "text halign" center
+         "text valign" center
+        }
+       }
+      }
+      PanelWidgetClass CloseDivider {
+       ignorepointer 1
+       color 1 0 0 0.2
+       position 0.03 0.92
+       size 0.94 0.001
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+      }
+      ButtonWidgetClass BtnCloseBottom {
+       color 0.15 0.08 0.08 1
+       position 0.02 0.93
+       size 0.96 0.04
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Editor
+       "no focus" 1
+       {
+        TextWidgetClass TxtClose {
+         ignorepointer 1
+         size 1 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "CLOSE [Ctrl+K]"
+         font "gui/fonts/metron"
+         "exact text" 1
+         "exact text size" 10
+         "text halign" center
+         "text valign" center
+        }
+       }
+      }
+      TextWidgetClass StatusText {
+       ignorepointer 1
+       position 0.02 0.975
+       size 0.96 0.02
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text ""
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 8
+       "text halign" center
+       "text valign" center
+      }
+     }
+    }
+    PanelWidgetClass LeftSep {
+     ignorepointer 1
+     color 1 0 0 0.3
+     position 0.18 0.038
+     size 0.002 0.962
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+    }
+    PanelWidgetClass CenterPanel {
+     ignorepointer 0
+     clipchildren 1
+     position 0.182 0.038
+     size 0.40 0.962
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     {
+      PanelWidgetClass EditorHdr {
+       ignorepointer 1
+       color 0 0 0 1
+       position 0.01 0
+       size 0.98 0.035
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style editor_quad_dark
+       {
+        TextWidgetClass EditorTitle {
+         ignorepointer 1
+         position 0.02 0
+         size 0.96 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "GROUP EDITOR"
+         font "gui/fonts/metron"
+         "exact text" 1
+         "exact text size" 13
+         "text valign" center
+        }
+       }
+      }
+      PanelWidgetClass EditorBG {
+       ignorepointer 1
+       color 0 0 0 0.35
+       position 0.01 0.04
+       size 0.98 0.96
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style editor_quad_dark
+      }
+      TextWidgetClass LblName {
+       ignorepointer 1
+       position 0.03 0.05
+       size 0.1 0.025
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text "Name:"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 10
+       "text valign" center
+      }
+      EditBoxWidgetClass EditGroupName {
+       position 0.14 0.05
+       size 0.84 0.025
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style DefaultBorder
+       text ""
+       "exact text" 1
+       font "gui/fonts/metron"
+      }
+      TextWidgetClass LblLeader {
+       ignorepointer 1
+       position 0.03 0.08
+       size 0.1 0.025
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text "Leader:"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 10
+       "text valign" center
+      }
+      EditBoxWidgetClass EditLeaderID {
+       position 0.14 0.08
+       size 0.70 0.025
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style DefaultBorder
+       text ""
+       "exact text" 1
+       font "gui/fonts/metron"
+      }
+      ButtonWidgetClass BtnSelectLeader {
+       color 0.15 0.4 0.5 1
+       position 0.86 0.08
+       size 0.12 0.025
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Editor
+       TextWidgetClass {
+        text "ONLINE"
+        font "gui/fonts/metron"
+        "exact text" 1
+        "exact text size" 9
+        "text halign" center
+        "text valign" center
+       }
+      }
+      TextWidgetClass LblDeputy {
+       ignorepointer 1
+       position 0.03 0.11
+       size 0.1 0.025
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text "Deputy:"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 10
+       "text valign" center
+      }
+      EditBoxWidgetClass EditDeputyID {
+       position 0.14 0.11
+       size 0.84 0.025
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style DefaultBorder
+       text ""
+       "exact text" 1
+       font "gui/fonts/metron"
+      }
+      TextWidgetClass LblFlag {
+       ignorepointer 1
+       position 0.03 0.14
+       size 0.1 0.025
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text "Flag:"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 10
+       "text valign" center
+      }
+      EditBoxWidgetClass EditFlagClass {
+       position 0.14 0.14
+       size 0.25 0.025
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style DefaultBorder
+       text ""
+       "exact text" 1
+       font "gui/fonts/metron"
+      }
+      ButtonWidgetClass BtnSelectFlag {
+       color 0.15 0.4 0.5 1
+       position 0.40 0.14
+       size 0.10 0.025
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Editor
+       TextWidgetClass {
+        text "FLAGS"
+        font "gui/fonts/metron"
+        "exact text" 1
+        "exact text size" 9
+        "text halign" center
+        "text valign" center
+       }
+      }
+      TextWidgetClass LblScore {
+       ignorepointer 1
+       position 0.52 0.14
+       size 0.1 0.025
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text "Score:"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 10
+       "text valign" center
+      }
+      EditBoxWidgetClass EditScore {
+       position 0.63 0.14
+       size 0.15 0.025
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style DefaultBorder
+       text "0"
+       "exact text" 1
+       font "gui/fonts/metron"
+      }
+      CheckBoxWidgetClass ChkDbAccess {
+       position 0.82 0.14
+       size 0.025 0.025
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+      }
+      TextWidgetClass LblDbAccess {
+       ignorepointer 1
+       position 0.85 0.14
+       size 0.13 0.025
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text "DB Access"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 9
+       "text valign" center
+      }
+      PanelWidgetClass MemberDivider {
+       ignorepointer 1
+       color 1 0 0 0.15
+       position 0.02 0.175
+       size 0.96 0.001
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+      }
+      PanelWidgetClass MemberHdr {
+       ignorepointer 1
+       color 0 0 0 0.7
+       position 0.01 0.18
+       size 0.98 0.025
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style editor_quad_dark
+       {
+        TextWidgetClass MemberTitle {
+         ignorepointer 1
+         size 1 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "MEMBERS (0)"
+         font "gui/fonts/metron"
+         "exact text" 1
+         "exact text size" 11
+         "text halign" center
+         "text valign" center
+        }
+       }
+      }
+      ScrollWidgetClass MemberScroll {
+       position 0.01 0.21
+       size 0.98 0.11
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       "Scrollbar V" 1
+       {
+        GridSpacerWidgetClass MemberList {
+         position 0 0
+         size 0.98 0
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+         Padding 1
+         Margin 1
+         "Size To Content V" 1
+         Columns 1
+         Rows 50
+        }
+       }
+      }
+      PanelWidgetClass MemberButtons {
+       position 0.01 0.325
+       size 0.98 0.03
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       {
+        EditBoxWidgetClass EditNewMember {
+         position 0 0
+         size 0.32 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         style DefaultBorder
+         text ""
+         "Use default text" 1
+         "exact text" 1
+         font "gui/fonts/metron"
+        }
+        ButtonWidgetClass BtnOnlineMember {
+         color 0.1 0.3 0.6 1
+         position 0.33 0
+         size 0.18 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         style Editor
+         "no focus" 1
+         {
+          TextWidgetClass TxtOnlineMem {
+           ignorepointer 1
+           size 1 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "ONLINE"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 9
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+        ButtonWidgetClass BtnAddMember {
+         color 0.12 0.42 0.18 1
+         position 0.52 0
+         size 0.13 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         style Editor
+         "no focus" 1
+         {
+          TextWidgetClass TxtAddMem {
+           ignorepointer 1
+           size 1 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "ADD"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 10
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+        ButtonWidgetClass BtnRemoveMember {
+         color 0.65 0.09 0.09 1
+         position 0.66 0
+         size 0.34 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         style Editor
+         "no focus" 1
+         {
+          TextWidgetClass TxtRemMem {
+           ignorepointer 1
+           size 1 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "REMOVE"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 10
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+       }
+      }
+      PanelWidgetClass SpawnDivider {
+       ignorepointer 1
+       color 1 0 0 0.15
+       position 0.02 0.365
+       size 0.96 0.001
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+      }
+      PanelWidgetClass SpawnHdr {
+       ignorepointer 1
+       color 0 0 0 0.7
+       position 0.01 0.37
+       size 0.98 0.025
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style editor_quad_dark
+       {
+        TextWidgetClass SpawnTitle {
+         ignorepointer 1
+         size 1 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "SPAWN POINTS (0)"
+         font "gui/fonts/metron"
+         "exact text" 1
+         "exact text size" 11
+         "text halign" center
+         "text valign" center
+        }
+       }
+      }
+      ScrollWidgetClass SpawnScroll {
+       position 0.01 0.40
+       size 0.98 0.10
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       "Scrollbar V" 1
+       {
+        GridSpacerWidgetClass SpawnList {
+         position 0 0
+         size 0.98 0
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+         Padding 1
+         Margin 1
+         "Size To Content V" 1
+         Columns 1
+         Rows 50
+        }
+       }
+      }
+      PanelWidgetClass SpawnButtons {
+       position 0.01 0.505
+       size 0.98 0.03
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       {
+        EditBoxWidgetClass EditSpawnName {
+         position 0 0
+         size 0.28 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         style DefaultBorder
+         text "Base"
+         "exact text" 1
+         font "gui/fonts/metron"
+        }
+        ButtonWidgetClass BtnMyPos {
+         color 0.55 0.15 0.08 1
+         position 0.30 0
+         size 0.22 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         style Editor
+         "no focus" 1
+         {
+          TextWidgetClass TxtMyPos {
+           ignorepointer 1
+           size 1 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "MY POS"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 10
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+        ButtonWidgetClass BtnAddSpawn {
+         color 0.12 0.42 0.18 1
+         position 0.54 0
+         size 0.22 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         style Editor
+         "no focus" 1
+         {
+          TextWidgetClass TxtAddSpn {
+           ignorepointer 1
+           size 1 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "ADD"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 10
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+        ButtonWidgetClass BtnRemoveSpawn {
+         color 0.65 0.09 0.09 1
+         position 0.78 0
+         size 0.22 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         style Editor
+         "no focus" 1
+         {
+          TextWidgetClass TxtRemSpn {
+           ignorepointer 1
+           size 1 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "REMOVE"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 10
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+       }
+      }
+      PanelWidgetClass ItemDivider {
+       ignorepointer 1
+       color 1 0 0 0.15
+       position 0.02 0.545
+       size 0.96 0.001
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+      }
+      PanelWidgetClass ItemHdr {
+       ignorepointer 1
+       color 0 0 0 0.7
+       position 0.01 0.55
+       size 0.98 0.025
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style editor_quad_dark
+       {
+        TextWidgetClass ItemTitle {
+         ignorepointer 1
+         size 1 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "LOADOUT ITEMS (0)"
+         font "gui/fonts/metron"
+         "exact text" 1
+         "exact text size" 11
+         "text halign" center
+         "text valign" center
+        }
+       }
+      }
+      PanelWidgetClass ItemListBG {
+       ignorepointer 1
+       color 0 0 0 0.4
+       position 0.01 0.58
+       size 0.98 0.25
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style editor_quad_dark
+      }
+      TextListboxWidgetClass ItemListBox {
+       visible 1
+       clipchildren 1
+       inheritalpha 0
+       color 0.67 0.67 0.67 1
+       position 0.01 0.58
+       size 0.98 0.25
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       scaled 1
+       style Editor
+       "title visible" 0
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 11
+       "row height" 16
+      }
+      PanelWidgetClass ItemButtons {
+       position 0.01 0.835
+       size 0.98 0.035
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       {
+        ButtonWidgetClass BtnRemoveItem {
+         color 0.55 0.08 0.08 1
+         position 0 0
+         size 0.48 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         style Editor
+         "no focus" 1
+         {
+          TextWidgetClass TxtRemItem {
+           ignorepointer 1
+           size 1 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "REMOVE ITEM"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 10
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+        ButtonWidgetClass BtnClearItems {
+         color 0.45 0.38 0.08 1
+         position 0.52 0
+         size 0.48 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         style Editor
+         "no focus" 1
+         {
+          TextWidgetClass TxtClear {
+           ignorepointer 1
+           size 1 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           text "CLEAR ALL"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 10
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+       }
+      }
+      PanelWidgetClass SaveDivider {
+       ignorepointer 1
+       color 1 0 0 0.15
+       position 0.02 0.88
+       size 0.96 0.001
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+      }
+      ButtonWidgetClass BtnSaveGroup {
+       color 0.1 0.3 0.5 1
+       position 0.01 0.89
+       size 0.98 0.045
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Editor
+       "no focus" 1
+       {
+        TextWidgetClass TxtSave {
+         ignorepointer 1
+         size 1 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "SAVE TO SERVER"
+         font "gui/fonts/metron"
+         "exact text" 1
+         "exact text size" 12
+         "text halign" center
+         "text valign" center
+        }
+       }
+      }
+      TextWidgetClass CenterStatus {
+       ignorepointer 1
+       position 0.02 0.945
+       size 0.96 0.025
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text ""
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 9
+       "text halign" center
+      }
+     }
+    }
+    PanelWidgetClass RightSep {
+     ignorepointer 1
+     color 1 0 0 0.3
+     position 0.582 0.038
+     size 0.002 0.962
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+    }
+    PanelWidgetClass RightPanel {
+     ignorepointer 0
+     clipchildren 1
+     position 0.584 0.038
+     size 0.416 0.962
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     {
+      PanelWidgetClass BrowserHdr {
+       ignorepointer 1
+       color 0 0 0 1
+       position 0.01 0
+       size 0.98 0.035
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style editor_quad_dark
+       {
+        TextWidgetClass BrowserTitle {
+         ignorepointer 1
+         size 1 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "ENTITY BROWSER"
+         font "gui/fonts/metron"
+         "exact text" 1
+         "exact text size" 13
+         "text halign" center
+         "text valign" center
+        }
+       }
+      }
+      EditBoxWidgetClass SearchInput {
+       position 0.01 0.045
+       size 0.98 0.035
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style DefaultBorder
+       text "Search..."
+       "Use default text" 1
+       "exact text" 1
+       font "gui/fonts/metron"
+      }
+      TextWidgetClass EntityCountText {
+       ignorepointer 1
+       position 0.03 0.085
+       size 0.94 0.02
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text "0 items"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 9
+      }
+      PanelWidgetClass EntityListBG {
+       ignorepointer 1
+       color 0 0 0 0.4
+       position 0.01 0.11
+       size 0.98 0.44
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style editor_quad_dark
+      }
+      TextListboxWidgetClass EntityListBox {
+       visible 1
+       clipchildren 1
+       inheritalpha 0
+       color 0.67 0.67 0.67 1
+       position 0.01 0.11
+       size 0.98 0.44
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       scaled 1
+       style Editor
+       "title visible" 0
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 11
+       "row height" 16
+      }
+      PanelWidgetClass BrowserDivider {
+       ignorepointer 1
+       color 1 0 0 0.2
+       position 0.02 0.56
+       size 0.96 0.001
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+      }
+      ButtonWidgetClass BtnAddToGroup {
+       color 0.12 0.42 0.18 1
+       position 0.01 0.565
+       size 0.98 0.04
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style Editor
+       "no focus" 1
+       {
+        TextWidgetClass TxtAddToGroup {
+         ignorepointer 1
+         size 1 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text ">> ADD TO LOADOUT <<"
+         font "gui/fonts/metron"
+         "exact text" 1
+         "exact text size" 12
+         "text halign" center
+         "text valign" center
+        }
+       }
+      }
+      PanelWidgetClass PreviewDivider {
+       ignorepointer 1
+       color 1 0 0 0.2
+       position 0.02 0.615
+       size 0.96 0.001
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+      }
+      PanelWidgetClass PreviewHdr {
+       ignorepointer 1
+       color 0 0 0 0.7
+       position 0.01 0.62
+       size 0.98 0.03
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style editor_quad_dark
+       {
+        TextWidgetClass PreviewHdrText {
+         ignorepointer 1
+         size 1 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         text "3D PREVIEW"
+         font "gui/fonts/metron"
+         "exact text" 1
+         "exact text size" 11
+         "text halign" center
+         "text valign" center
+        }
+       }
+      }
+      PanelWidgetClass PreviewBG {
+       ignorepointer 1
+       color 0.02 0.02 0.03 1
+       position 0.01 0.655
+       size 0.98 0.30
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       style editor_quad_dark
+      }
+      ItemPreviewWidgetClass ItemPreviewWidget {
+       position 0.01 0.655
+       size 0.98 0.30
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+      }
+      TextWidgetClass PreviewName {
+       ignorepointer 1
+       position 0.02 0.96
+       size 0.96 0.025
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text ""
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 9
+       "text halign" center
+      }
+     }
+    }
+   }
+  }
+  PanelWidgetClass Header {
+   ignorepointer 0
+   size 0.97 0.035
+   halign center_ref
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   draggable 1
+   style blank
+  }
+  PanelWidgetClass HeaderTitle {
+   ignorepointer 1
+   color 0 0 0 1
+   position 0 0
+   size 1 0.038
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   style DayZDefaultPanel
+   {
+    TextWidgetClass Title {
+     ignorepointer 1
+     size 1 1.3
+     halign center_ref
+     valign center_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     text "GROUP ADMIN"
+     font "gui/fonts/metron"
+     "exact text" 1
+     "exact text size" 16
+     "text halign" center
+     "text valign" center
+    }
+    ButtonWidgetClass BtnCloseX {
+     clipchildren 1
+     color 0 0 0 1
+     size 0.03 1
+     halign right_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     style Editor
+     {
+      ImageWidgetClass ImageClose {
+       ignorepointer 1
+       color 1 0 0 1
+       size 0.97 1
+       halign center_ref
+       valign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       image0 "set:ccgui_enforce image:Icon28EmptySlot"
+       mode additive
+       "src alpha" 1
+      }
+     }
+    }
+   }
+  }
+ }
+}

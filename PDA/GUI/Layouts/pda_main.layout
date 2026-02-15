@@ -1,0 +1,4379 @@
+FrameWidgetClass GPDA_Root {
+ position 0 0
+ size 1 1
+ halign center_ref
+ valign center_ref
+ {
+  FrameWidgetClass GPDA_MainFrame {
+   position 0.12 0.06
+   size 0.76 0.88
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   {
+    // ═══════════════════════════════════════════════════════════════════════
+    // BACKGROUND
+    // ═══════════════════════════════════════════════════════════════════════
+    ImageWidgetClass GPDA_Background {
+     ignorepointer 1
+     color 0.055 0.06 0.07 0.98
+     position 0 0
+     size 1 1
+    }
+    
+    // ═══════════════════════════════════════════════════════════════════════
+    // HEADER
+    // ═══════════════════════════════════════════════════════════════════════
+    FrameWidgetClass GPDA_Header {
+     position 0 0
+     size 1 0.075
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     {
+      ImageWidgetClass GPDA_HeaderBg {
+     ignorepointer 1
+       color 0.04 0.045 0.055 1
+     position 0 0
+     size 1 1
+      }
+      
+      ImageWidgetClass GPDA_HeaderLine {
+     ignorepointer 1
+       color 0.18 0.75 0.45 0.6
+       position 0 0.97
+       size 1 3
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 1
+    }
+      
+      // Logo
+      ImageWidgetClass GPDA_LogoBox {
+     ignorepointer 1
+       color 0.15 0.65 0.4 1
+       position 18 12
+       size 40 40
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+      }
+      
+      TextWidgetClass GPDA_Title {
+       ignorepointer 1
+       color 1 1 1 1
+       position 70 10
+       size 180 22
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "ECHO PDA"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 18
+       "text valign" center
+      }
+      
+      TextWidgetClass GPDA_Subtitle {
+       ignorepointer 1
+       color 0.5 0.55 0.52 1
+       position 70 34
+       size 250 16
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "Personal digital assistant"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 10
+       "text valign" center
+      }
+      
+      TextWidgetClass GPDA_DiscordLink {
+       ignorepointer 1
+       color 0.45 0.55 0.85 1
+       position 260 20
+       size 450 14
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "By GRESHNIK | Discord: discord.gg/EqMSqBwcUZ"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 9
+       "text valign" center
+      }
+      
+      // User section
+      TextWidgetClass GPDA_UserName {
+       ignorepointer 1
+       color 1 1 1 1
+       position 0.62 0.15
+       size 0.18 0.4
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+       vexactsize 0
+       text "Player"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 12
+       "text halign" right
+       "text valign" center
+      }
+      
+      TextWidgetClass GPDA_UserFaction {
+       ignorepointer 1
+       color 0.5 0.55 0.52 1
+       position 0.62 0.5
+       size 0.18 0.35
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       text "Loner"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 10
+       "text halign" right
+       "text valign" center
+      }
+      
+        ImageWidgetClass GPDA_UserAvatar {
+         ignorepointer 1
+       color 0.18 0.7 0.45 1
+       position 0.82 0.15
+       size 38 38
+         hexactpos 0
+         vexactpos 0
+         hexactsize 1
+     vexactsize 1
+    }
+        
+        TextWidgetClass GPDA_UserAvatarLetter {
+     ignorepointer 1
+         color 1 1 1 1
+       position 0.82 0.15
+       size 38 38
+       hexactpos 0
+     vexactpos 0
+     hexactsize 1
+       vexactsize 1
+       text "P"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 16
+       "text halign" center
+       "text valign" center
+      }
+      
+      // Online status
+      ImageWidgetClass GPDA_OnlineDot {
+     ignorepointer 1
+       color 0.2 0.85 0.45 1
+       position 0.89 0.3
+       size 8 8
+       hexactpos 0
+     vexactpos 0
+     hexactsize 1
+       vexactsize 1
+      }
+      
+      TextWidgetClass GPDA_OnlineStatus {
+       ignorepointer 1
+       color 0.2 0.85 0.45 1
+       position 0.82 0.2
+       size 80 24
+       hexactpos 0
+       vexactpos 0
+       hexactsize 1
+       vexactsize 1
+       text "0/60"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 10
+       "text valign" center
+       "text halign" right
+      }
+      
+      TextWidgetClass GPDA_ServerTime {
+       ignorepointer 1
+       color 0.7 0.75 0.72 1
+       position 0.89 0.2
+       size 60 24
+       hexactpos 0
+       vexactpos 0
+       hexactsize 1
+       vexactsize 1
+       text "00:00"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 10
+       "text valign" center
+       "text halign" center
+      }
+      
+      // Close button
+      ButtonWidgetClass GPDA_BtnClose {
+       color 0.6 0.2 0.2 0.4
+       position 0.965 0.2
+         size 28 28
+         hexactpos 0
+         vexactpos 0
+         hexactsize 1
+         vexactsize 1
+       {
+        TextWidgetClass GPDA_BtnCloseText {
+         ignorepointer 1
+         color 1 0.4 0.4 1
+     position 0 0
+         size 1 1
+         text "X"
+         font "gui/fonts/metron"
+         "exact text" 1
+         "exact text size" 12
+         "text halign" center
+         "text valign" center
+        }
+       }
+      }
+     }
+    }
+    
+    // ═══════════════════════════════════════════════════════════════════════
+    // SIDEBAR
+    // ═══════════════════════════════════════════════════════════════════════
+    FrameWidgetClass GPDA_Sidebar {
+     position 0 0.075
+     size 0.16 0.925
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     {
+      ImageWidgetClass GPDA_SidebarBg {
+       ignorepointer 1
+       color 0.04 0.045 0.055 1
+       position 0 0
+       size 1 1
+      }
+      
+      ImageWidgetClass GPDA_SidebarLine {
+       ignorepointer 1
+       color 0.12 0.14 0.16 1
+       position 0.98 0
+       size 2 1
+       hexactpos 0
+       vexactpos 0
+       hexactsize 1
+       vexactsize 0
+      }
+      
+      // Tab: Chat
+      ButtonWidgetClass GPDA_Tab_Chat {
+       color 0.12 0.5 0.32 0.25
+       position 0.08 0.02
+       size 0.84 0.065
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+       {
+        ImageWidgetClass GPDA_Tab_ChatIcon {
+         ignorepointer 1
+         visible 0
+         color 0.2 0.8 0.5 1
+         position 12 10
+         size 20 20
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+      }
+        TextWidgetClass GPDA_Tab_ChatText {
+         ignorepointer 1
+         color 0.2 0.85 0.5 1
+         position 14 0
+         size 120 1
+         hexactpos 1
+         vexactpos 0
+         hexactsize 1
+         vexactsize 0
+         text "Chat"
+         font "gui/fonts/metron"
+         "exact text" 1
+         "exact text size" 12
+         "text valign" center
+        }
+       }
+      }
+      
+      // Tab: Profile
+      ButtonWidgetClass GPDA_Tab_Profile {
+       color 0.06 0.07 0.08 1
+       position 0.08 0.095
+       size 0.84 0.065
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       {
+        ImageWidgetClass GPDA_Tab_ProfileIcon {
+       ignorepointer 1
+       visible 0
+         color 0.5 0.55 0.52 1
+         position 12 10
+         size 20 20
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+        }
+        TextWidgetClass GPDA_Tab_ProfileText {
+         ignorepointer 1
+         color 0.5 0.55 0.52 1
+         position 14 0
+         size 120 1
+         hexactpos 1
+         vexactpos 0
+         hexactsize 1
+         vexactsize 0
+         text "Profile"
+       font "gui/fonts/metron"
+       "exact text" 1
+         "exact text size" 12
+       "text valign" center
+      }
+       }
+      }
+      
+      // Tab: Map
+      ButtonWidgetClass GPDA_Tab_Map {
+       color 0.06 0.07 0.08 1
+       position 0.08 0.17
+       size 0.84 0.065
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+       {
+        ImageWidgetClass GPDA_Tab_MapIcon {
+       ignorepointer 1
+       visible 0
+       color 0.5 0.55 0.52 1
+         position 12 10
+         size 20 20
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+        }
+        TextWidgetClass GPDA_Tab_MapText {
+         ignorepointer 1
+         color 0.5 0.55 0.52 1
+         position 14 0
+         size 120 1
+         hexactpos 1
+         vexactpos 0
+         hexactsize 1
+         vexactsize 0
+         text "Map"
+       font "gui/fonts/metron"
+       "exact text" 1
+         "exact text size" 12
+       "text valign" center
+      }
+       }
+      }
+      
+      // Tab: TOP 100
+      ButtonWidgetClass GPDA_Tab_Top100 {
+       color 0.06 0.07 0.08 1
+       position 0.08 0.245
+       size 0.84 0.065
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       {
+        ImageWidgetClass GPDA_Tab_Top100Icon {
+         ignorepointer 1
+         visible 0
+         color 0.5 0.55 0.52 1
+         position 12 10
+         size 20 20
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+        }
+        TextWidgetClass GPDA_Tab_Top100Text {
+         ignorepointer 1
+         color 0.5 0.55 0.52 1
+         position 14 0
+         size 120 1
+         hexactpos 1
+         vexactpos 0
+         hexactsize 1
+         vexactsize 0
+         text "TOP 100"
+         font "gui/fonts/metron"
+         "exact text" 1
+         "exact text size" 12
+         "text valign" center
+        }
+       }
+      }
+      
+      // Tab: Messages
+      ButtonWidgetClass GPDA_Tab_PM {
+       color 0.06 0.07 0.08 1
+       position 0.08 0.32
+       size 0.84 0.065
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+       {
+        ImageWidgetClass GPDA_Tab_PMIcon {
+         ignorepointer 1
+         visible 0
+         color 0.5 0.55 0.52 1
+         position 12 10
+         size 20 20
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+        }
+        TextWidgetClass GPDA_Tab_PMText {
+         ignorepointer 1
+         color 0.5 0.55 0.52 1
+         position 14 0
+         size 120 1
+         hexactpos 1
+         vexactpos 0
+         hexactsize 1
+         vexactsize 0
+         text "Messages"
+         font "gui/fonts/metron"
+         "exact text" 1
+         "exact text size" 12
+         "text valign" center
+        }
+       }
+      }
+      
+      // Tab: Groups
+      ButtonWidgetClass GPDA_Tab_Groups {
+       color 0.06 0.07 0.08 1
+       position 0.08 0.395
+       size 0.84 0.065
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       {
+        ImageWidgetClass GPDA_Tab_GroupsIcon {
+         ignorepointer 1
+         visible 0
+         color 0.5 0.55 0.52 1
+         position 12 10
+         size 20 20
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+        }
+        TextWidgetClass GPDA_Tab_GroupsText {
+     ignorepointer 1
+         color 0.5 0.55 0.52 1
+         position 14 0
+         size 120 1
+         hexactpos 1
+         vexactpos 0
+         hexactsize 1
+         vexactsize 0
+         text "Groups"
+         font "gui/fonts/metron"
+         "exact text" 1
+         "exact text size" 12
+         "text valign" center
+        }
+       }
+      }
+      
+      // Tab: Rank - HIDDEN (moved to Profile)
+      ButtonWidgetClass GPDA_Tab_Rank {
+       color 0.06 0.07 0.08 1
+       position 0.08 0.47
+       size 0.84 0.065
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       visible 0
+       {
+        ImageWidgetClass GPDA_Tab_RankIcon {
+         ignorepointer 1
+         visible 0
+         color 0.6 0.4 0.9 1
+         position 12 10
+         size 20 20
+         hexactpos 1
+         vexactpos 1
+       hexactsize 1
+       vexactsize 1
+        }
+        TextWidgetClass GPDA_Tab_RankText {
+         ignorepointer 1
+         color 0.6 0.4 0.9 1
+         position 14 0
+         size 120 1
+         hexactpos 1
+         vexactpos 0
+         hexactsize 1
+         vexactsize 0
+         text "Rank"
+       font "gui/fonts/metron"
+       "exact text" 1
+         "exact text size" 12
+       "text valign" center
+      }
+       }
+      }
+      
+      // Tab: Support (Tickets)
+      ButtonWidgetClass GPDA_Tab_Support {
+       color 0.06 0.07 0.08 1
+       position 0.08 0.47
+       size 0.84 0.065
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       {
+        ImageWidgetClass GPDA_Tab_SupportIcon {
+         ignorepointer 1
+         visible 0
+         color 0.3 0.7 0.9 1
+         position 12 10
+         size 20 20
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+        }
+        TextWidgetClass GPDA_Tab_SupportText {
+         ignorepointer 1
+         color 0.3 0.7 0.9 1
+         position 14 0
+         size 120 1
+         hexactpos 1
+         vexactpos 0
+         hexactsize 1
+         vexactsize 0
+         text "Support"
+         font "gui/fonts/metron"
+         "exact text" 1
+         "exact text size" 12
+         "text valign" center
+        }
+       }
+      }
+      
+      // Database tab (Admin only) - position after Support
+      ButtonWidgetClass GPDA_Tab_Database {
+       color 0.06 0.07 0.08 1
+       position 0.08 0.545
+       size 0.84 0.065
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       visible 0
+       {
+        ImageWidgetClass GPDA_Tab_DatabaseIcon {
+         ignorepointer 1
+         visible 0
+         color 0.85 0.3 0.3 1
+         position 12 10
+         size 20 20
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+        }
+        TextWidgetClass GPDA_Tab_DatabaseText {
+     ignorepointer 1
+         color 0.85 0.3 0.3 1
+         position 14 0
+         size 120 1
+         hexactpos 1
+         vexactpos 0
+         hexactsize 1
+         vexactsize 0
+         text "Database"
+         font "gui/fonts/metron"
+         "exact text" 1
+         "exact text size" 12
+         "text valign" center
+        }
+       }
+      }
+      
+      // Tab: Admins (Admin only) - position after Database
+      ButtonWidgetClass GPDA_Tab_Admins {
+       color 0.06 0.07 0.08 1
+       position 0.08 0.62
+       size 0.84 0.065
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+       vexactsize 0
+       visible 0
+       {
+        ImageWidgetClass GPDA_Tab_AdminsIcon {
+         ignorepointer 1
+         visible 0
+         color 0.95 0.55 0.2 1
+         position 12 10
+         size 20 20
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+     vexactsize 1
+    }
+        TextWidgetClass GPDA_Tab_AdminsText {
+         ignorepointer 1
+         color 0.95 0.55 0.2 1
+         position 14 0
+         size 120 1
+         hexactpos 1
+         vexactpos 0
+         hexactsize 1
+         vexactsize 0
+         text "Admins"
+         font "gui/fonts/metron"
+         "exact text" 1
+         "exact text size" 12
+         "text valign" center
+        }
+       }
+      }
+      
+      
+      // Footer
+      TextWidgetClass GPDA_Version {
+       ignorepointer 1
+       color 0.35 0.4 0.38 0.7
+       position 0.08 0.93
+       size 0.84 0.03
+       text "ECHO PDA v1.0"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 8
+       "text halign" center
+       "text valign" center
+      }
+      
+      TextWidgetClass GPDA_Status {
+       ignorepointer 1
+       color 0.2 0.75 0.45 0.7
+       position 0.08 0.96
+       size 0.84 0.025
+       text "System ready"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 7
+       "text halign" center
+       "text valign" center
+      }
+     }
+    }
+    
+    // ═══════════════════════════════════════════════════════════════════════
+    // CONTENT AREA
+    // ═══════════════════════════════════════════════════════════════════════
+    FrameWidgetClass GPDA_ContentArea {
+     position 0.16 0.075
+     size 0.84 0.925
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     {
+      ImageWidgetClass GPDA_ContentBg {
+       ignorepointer 1
+       color 0.05 0.055 0.065 1
+       position 0 0
+       size 1 1
+      }
+
+      FrameWidgetClass GPDA_AuthPanel {
+       visible 0
+       position 0.15 0.12
+       size 0.70 0.72
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       {
+        ImageWidgetClass GPDA_AuthBg {
+         ignorepointer 1
+         color 0.04 0.045 0.055 0.98
+         position 0 0
+         size 1 1
+        }
+        ImageWidgetClass GPDA_AuthBorder {
+         ignorepointer 1
+         color 0.15 0.6 0.38 0.4
+         position 0 0
+         size 1 2
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+        }
+        TextWidgetClass GPDA_AuthTitle {
+         ignorepointer 1
+         color 0.2 0.85 0.5 1
+         position 0.05 0.05
+         size 0.9 0.1
+         text "PDA Account"
+         font "gui/fonts/metron"
+         "exact text" 1
+         "exact text size" 14
+         "text valign" center
+        }
+        TextWidgetClass GPDA_AuthStatus {
+         ignorepointer 1
+         color 1 1 1 1
+         position 0.05 0.14
+         size 0.9 0.08
+         text "Not logged in"
+         font "gui/fonts/metron"
+         "exact text" 1
+         "exact text size" 10
+         "text valign" center
+        }
+
+        TextWidgetClass GPDA_AuthLoginLabel {
+         ignorepointer 1
+         color 0.7 0.9 0.8 0.9
+         position 0.08 0.25
+         size 0.84 0.05
+         text "LOGIN"
+         font "gui/fonts/metron"
+         "exact text" 1
+         "exact text size" 10
+        }
+
+        ImageWidgetClass GPDA_AuthLoginBg {
+         ignorepointer 1
+         color 0.08 0.09 0.11 1
+         position 0.08 0.30
+         size 0.84 0.12
+        }
+        EditBoxWidgetClass GPDA_AuthLogin {
+         color 0.95 0.95 0.95 1
+         position 0.095 0.315
+         size 0.81 0.09
+         font "gui/fonts/metron"
+         "exact text" 1
+         "exact text size" 11
+        }
+
+        TextWidgetClass GPDA_AuthPasswordLabel {
+         ignorepointer 1
+         color 0.7 0.9 0.8 0.9
+         position 0.08 0.43
+         size 0.84 0.05
+         text "PASSWORD"
+         font "gui/fonts/metron"
+         "exact text" 1
+         "exact text size" 10
+        }
+
+        ImageWidgetClass GPDA_AuthPasswordBg {
+         ignorepointer 1
+         color 0.08 0.09 0.11 1
+         position 0.08 0.48
+         size 0.84 0.12
+        }
+        EditBoxWidgetClass GPDA_AuthPassword {
+         color 0.95 0.95 0.95 1
+         position 0.095 0.495
+         size 0.81 0.09
+         font "gui/fonts/metron"
+         "exact text" 1
+         "exact text size" 11
+        }
+        ButtonWidgetClass GPDA_AuthBtnLogin {
+         color 0.15 0.6 0.38 1
+         position 0.08 0.70
+         size 0.26 0.18
+         {
+          TextWidgetClass GPDA_AuthBtnLoginText {
+           ignorepointer 1
+           color 1 1 1 1
+           position 0 0
+           size 1 1
+           text "LOGIN"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 10
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+        ButtonWidgetClass GPDA_AuthBtnRegister {
+         color 0.3 0.5 0.85 0.6
+         position 0.37 0.70
+         size 0.26 0.18
+         {
+          TextWidgetClass GPDA_AuthBtnRegisterText {
+           ignorepointer 1
+           color 1 1 1 1
+           position 0 0
+           size 1 1
+           text "REGISTER"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 10
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+        ButtonWidgetClass GPDA_AuthBtnLogout {
+         color 0.6 0.2 0.2 0.4
+         position 0.66 0.70
+         size 0.26 0.18
+         {
+          TextWidgetClass GPDA_AuthBtnLogoutText {
+           ignorepointer 1
+           color 1 1 1 1
+           position 0 0
+           size 1 1
+           text "LOGOUT"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 10
+           "text halign" center
+           "text valign" center
+          }
+         }
+        }
+       }
+      }
+      
+      // ═══════════════════════════════════════════════════════════════════
+      // CHAT PANEL
+      // ═══════════════════════════════════════════════════════════════════
+      FrameWidgetClass GPDA_Panel_Chat {
+       visible 1
+       position 0 0
+       size 1 1
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       {
+        // Header
+        FrameWidgetClass GPDA_ChatHeader {
+         position 0.025 0.02
+         size 0.95 0.065
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         {
+          ImageWidgetClass GPDA_ChatIconBg {
+           ignorepointer 1
+           color 0.15 0.6 0.38 0.25
+           position 0 5
+           size 36 36
+           hexactpos 0
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+          }
+          ImageWidgetClass GPDA_ChatIcon {
+           ignorepointer 1
+           color 0.2 0.8 0.5 1
+           position 8 13
+           size 20 20
+           hexactpos 0
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+          }
+          
+          TextWidgetClass GPDA_ChatTitle {
+           ignorepointer 1
+           color 0.2 0.85 0.5 1
+           position 48 2
+           size 200 22
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           text "Global Chat"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 16
+           "text valign" center
+          }
+          
+          TextWidgetClass GPDA_ChatSubtitle {
+           ignorepointer 1
+           color 0.5 0.55 0.52 1
+           position 48 26
+           size 280 14
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           text "Communication between stalkers"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 9
+           "text valign" center
+          }
+          
+          // Online badge
+          ImageWidgetClass GPDA_OnlineBadgeBg {
+           ignorepointer 1
+           color 0.07 0.08 0.09 1
+           position 0.62 0.2
+           size 85 28
+           hexactpos 0
+           vexactpos 0
+           hexactsize 1
+           vexactsize 1
+          }
+          ImageWidgetClass GPDA_OnlineBadgeDot {
+           ignorepointer 1
+           color 0.2 0.85 0.45 1
+           position 0.625 0.38
+           size 8 8
+           hexactpos 0
+           vexactpos 0
+           hexactsize 1
+           vexactsize 1
+          }
+          TextWidgetClass GPDA_ChatOnline {
+           ignorepointer 1
+           color 0.2 0.85 0.45 1
+           position 0.655 0.2
+           size 60 28
+           hexactpos 0
+           vexactpos 0
+           hexactsize 1
+           vexactsize 1
+           text "1 online"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 10
+           "text valign" center
+          }
+         }
+        }
+        
+        ImageWidgetClass GPDA_ChatSeparator {
+         ignorepointer 1
+         color 0.15 0.6 0.38 0.25
+         position 0.025 0.095
+         size 0.95 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+        }
+        
+        // Chat list
+        ScrollWidgetClass GPDA_ChatScroll {
+         position 0.025 0.11
+         size 0.95 0.78
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         style Default
+         "Scrollbar V" 1
+         {
+          WrapSpacerWidgetClass GPDA_ChatContent {
+           position 0 0
+           size 1 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+          }
+         }
+        }
+        
+        // Input area
+        FrameWidgetClass GPDA_ChatInputArea {
+         position 0.025 0.9
+         size 0.95 0.085
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         {
+          ImageWidgetClass GPDA_ChatInputBg {
+           ignorepointer 1
+           color 0.04 0.045 0.055 1
+           position 0 0
+           size 0.70 1
+          }
+          ImageWidgetClass GPDA_ChatInputBorder {
+           ignorepointer 1
+           color 0.15 0.6 0.38 0.4
+           position 0 0
+           size 0.70 2
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 1
+          }
+          
+          EditBoxWidgetClass GPDA_ChatInput {
+           color 0.9 0.9 0.9 1
+           position 0.015 0.2
+           size 0.67 0.6
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 11
+          }
+          
+          ButtonWidgetClass GPDA_BtnAnonChat {
+           color 0.25 0.25 0.28 1
+           position 0.70 0.1
+           size 0.09 0.8
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           {
+            TextWidgetClass GPDA_BtnAnonChatText {
+             ignorepointer 1
+             color 1 1 1 1
+             position 0 0
+             size 1 1
+             text "ANON"
+             font "gui/fonts/metron"
+             "exact text" 1
+             "exact text size" 10
+             "text halign" center
+             "text valign" center
+            }
+           }
+          }
+
+          ButtonWidgetClass GPDA_BtnNotifyToggle {
+           color 0.25 0.25 0.28 1
+           position 0.80 0.1
+           size 0.09 0.8
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           {
+            TextWidgetClass GPDA_BtnNotifyToggleText {
+             ignorepointer 1
+             color 1 1 1 1
+             position 0 0
+             size 1 1
+             text "NOTIF"
+             font "gui/fonts/metron"
+             "exact text" 1
+             "exact text size" 10
+             "text halign" center
+             "text valign" center
+            }
+           }
+          }
+            
+          ButtonWidgetClass GPDA_BtnSendChat {
+           color 0.15 0.6 0.38 1
+           position 0.90 0.1
+           size 0.10 0.8
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           {
+            TextWidgetClass GPDA_BtnSendChatText {
+             ignorepointer 1
+             color 1 1 1 1
+             position 0 0
+             size 1 1
+             text "SEND"
+             font "gui/fonts/metron"
+             "exact text" 1
+             "exact text size" 11
+             "text halign" center
+             "text valign" center
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+      
+      // ═══════════════════════════════════════════════════════════════════
+      // PROFILE PANEL
+      // ═══════════════════════════════════════════════════════════════════
+      FrameWidgetClass GPDA_Panel_Profile {
+       visible 0
+       position 0 0
+       size 1 1
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       {
+        // Header
+        FrameWidgetClass GPDA_ProfileHeader {
+         position 0.025 0.02
+         size 0.95 0.065
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         {
+          ImageWidgetClass GPDA_ProfileIconBg {
+           ignorepointer 1
+           color 0.3 0.5 0.85 0.25
+           position 0 5
+           size 36 36
+           hexactpos 0
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+          }
+          
+          TextWidgetClass GPDA_ProfileTitle {
+           ignorepointer 1
+           color 0.4 0.65 0.95 1
+           position 48 2
+           size 200 22
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           text "Profile"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 16
+           "text valign" center
+          }
+         }
+        }
+        
+        ImageWidgetClass GPDA_ProfileSeparator {
+         ignorepointer 1
+         color 0.3 0.5 0.85 0.25
+         position 0.025 0.095
+         size 0.95 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+        }
+        
+        // Profile content
+        FrameWidgetClass GPDA_ProfileContent {
+         position 0.025 0.12
+         size 0.95 0.86
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         {
+          // Avatar
+          ImageWidgetClass GPDA_ProfileAvatarBg {
+           ignorepointer 1
+           color 0.18 0.65 0.42 1
+           position 0 0
+           size 80 80
+           hexactpos 0
+           vexactpos 0
+           hexactsize 1
+           vexactsize 1
+          }
+          TextWidgetClass GPDA_ProfileAvatarLetter {
+           ignorepointer 1
+           color 1 1 1 1
+           position 0 0
+           size 80 80
+           hexactpos 0
+           vexactpos 0
+           hexactsize 1
+           vexactsize 1
+           text "P"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 32
+           "text halign" center
+           "text valign" center
+          }
+          
+          // Player info
+          TextWidgetClass GPDA_ProfileNickname {
+           ignorepointer 1
+           color 1 1 1 1
+           position 95 5
+           size 300 26
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           text "Player Name"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 18
+           "text valign" center
+          }
+          
+          TextWidgetClass GPDA_ProfileGroup {
+           ignorepointer 1
+           color 0.95 0.6 0.2 1
+           position 95 36
+           size 300 20
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           text "Group: None"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 13
+           "text valign" center
+          }
+          
+          TextWidgetClass GPDA_ProfileBio {
+           ignorepointer 1
+           color 0.65 0.68 0.65 1
+           position 95 58
+           size 400 18
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           text ""
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 10
+           "text valign" center
+          }
+          
+          // Separator
+          ImageWidgetClass GPDA_StatsSeparator {
+           ignorepointer 1
+           color 0.12 0.14 0.16 1
+           position 0 95
+           size 1 1
+           hexactpos 0
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+          }
+          
+          // Stats title
+          TextWidgetClass GPDA_StatsTitle {
+           ignorepointer 1
+           color 0.5 0.55 0.52 1
+           position 0 110
+           size 200 20
+           hexactpos 0
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           text "STATISTICS"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 10
+           "text valign" center
+          }
+          
+          // Stats grid
+          FrameWidgetClass GPDA_StatsGrid {
+           position 0 140
+           size 1 160
+           hexactpos 0
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           {
+            // Stat 1: Player Kills
+            FrameWidgetClass GPDA_StatBox1 {
+             position 0 0
+             size 0.24 70
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 1
+             {
+              ImageWidgetClass GPDA_StatBox1Bg {
+               ignorepointer 1
+               color 0.12 0.14 0.16 1
+               position 0 0
+               size 1 1
+              }
+              ImageWidgetClass GPDA_StatBox1Border {
+               ignorepointer 1
+               color 0.9 0.35 0.3 0.6
+               position 0 0
+               size 1 2
+               hexactpos 0
+               vexactpos 0
+               hexactsize 0
+               vexactsize 1
+              }
+              TextWidgetClass GPDA_StatBox1Value {
+               ignorepointer 1
+               color 1 1 1 1
+               position 0 0.1
+               size 1 0.5
+               text "0"
+               font "gui/fonts/metron"
+               "exact text" 1
+               "exact text size" 28
+               "text halign" center
+               "text valign" center
+              }
+              TextWidgetClass GPDA_StatBox1Label {
+               ignorepointer 1
+               color 1 1 1 0.9
+               position 0 0.6
+               size 1 0.35
+               text "PLAYER KILLS"
+               font "gui/fonts/metron"
+               "exact text" 1
+               "exact text size" 10
+               "text halign" center
+               "text valign" center
+              }
+             }
+            }
+            
+            // Stat 2: Zombie Kills
+            FrameWidgetClass GPDA_StatBox2 {
+             position 0.26 0
+             size 0.24 70
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 1
+             {
+              ImageWidgetClass GPDA_StatBox2Bg {
+               ignorepointer 1
+               color 0.12 0.14 0.16 1
+               position 0 0
+               size 1 1
+              }
+              ImageWidgetClass GPDA_StatBox2Border {
+               ignorepointer 1
+               color 0.2 0.65 0.4 0.6
+               position 0 0
+               size 1 2
+               hexactpos 0
+               vexactpos 0
+               hexactsize 0
+               vexactsize 1
+              }
+              TextWidgetClass GPDA_StatBox2Value {
+               ignorepointer 1
+               color 1 1 1 1
+               position 0 0.1
+               size 1 0.5
+               text "0"
+               font "gui/fonts/metron"
+               "exact text" 1
+               "exact text size" 28
+               "text halign" center
+               "text valign" center
+              }
+              TextWidgetClass GPDA_StatBox2Label {
+               ignorepointer 1
+               color 1 1 1 0.9
+               position 0 0.6
+               size 1 0.35
+               text "ZOMBIE KILLS"
+               font "gui/fonts/metron"
+               "exact text" 1
+               "exact text size" 10
+               "text halign" center
+               "text valign" center
+              }
+             }
+            }
+            
+            // Stat 3: K/D Ratio
+            FrameWidgetClass GPDA_StatBox3 {
+             position 0.52 0
+             size 0.24 70
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 1
+             {
+              ImageWidgetClass GPDA_StatBox3Bg {
+               ignorepointer 1
+               color 0.12 0.14 0.16 1
+               position 0 0
+               size 1 1
+              }
+              ImageWidgetClass GPDA_StatBox3Border {
+               ignorepointer 1
+               color 0.8 0.6 0.2 0.6
+               position 0 0
+               size 1 2
+               hexactpos 0
+               vexactpos 0
+               hexactsize 0
+               vexactsize 1
+              }
+              TextWidgetClass GPDA_StatBox3Value {
+               ignorepointer 1
+               color 1 1 1 1
+               position 0 0.1
+               size 1 0.5
+               text "0.00"
+               font "gui/fonts/metron"
+               "exact text" 1
+               "exact text size" 28
+               "text halign" center
+               "text valign" center
+              }
+              TextWidgetClass GPDA_StatBox3Label {
+               ignorepointer 1
+               color 1 1 1 0.9
+               position 0 0.6
+               size 1 0.35
+               text "K/D RATIO"
+               font "gui/fonts/metron"
+               "exact text" 1
+               "exact text size" 10
+               "text halign" center
+               "text valign" center
+              }
+             }
+            }
+            
+            // Stat 4: Playtime
+            FrameWidgetClass GPDA_StatBox4 {
+             position 0.78 0
+             size 0.22 70
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 1
+             {
+              ImageWidgetClass GPDA_StatBox4Bg {
+               ignorepointer 1
+               color 0.12 0.14 0.16 1
+               position 0 0
+               size 1 1
+              }
+              ImageWidgetClass GPDA_StatBox4Border {
+               ignorepointer 1
+               color 0.3 0.45 0.7 0.6
+               position 0 0
+               size 1 2
+               hexactpos 0
+               vexactpos 0
+               hexactsize 0
+               vexactsize 1
+              }
+              TextWidgetClass GPDA_StatBox4Value {
+               ignorepointer 1
+               color 1 1 1 1
+               position 0 0.1
+               size 1 0.5
+               text "0h"
+               font "gui/fonts/metron"
+               "exact text" 1
+               "exact text size" 28
+               "text halign" center
+               "text valign" center
+              }
+              TextWidgetClass GPDA_StatBox4Label {
+               ignorepointer 1
+               color 1 1 1 0.9
+               position 0 0.6
+               size 1 0.35
+               text "PLAYTIME"
+               font "gui/fonts/metron"
+               "exact text" 1
+               "exact text size" 10
+               "text halign" center
+               "text valign" center
+              }
+             }
+            }
+           }
+          }
+          
+          // ═══════════════════════════════════════════════════════════════
+          // RANK & XP SECTION - Modern gradient card
+          // ═══════════════════════════════════════════════════════════════
+          
+          FrameWidgetClass GPDA_RankSection {
+           position 0 310
+           size 1 85
+           hexactpos 0
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           {
+            ImageWidgetClass GPDA_RankCardBg {
+             ignorepointer 1
+             color 0.08 0.1 0.14 1
+             position 0 0
+             size 1 1
+            }
+            ImageWidgetClass GPDA_RankCardAccent {
+             ignorepointer 1
+             color 0.6 0.4 0.9 0.8
+             position 0 0
+             size 4 1
+             hexactpos 0
+             vexactpos 0
+             hexactsize 1
+             vexactsize 0
+            }
+            // Rank icon
+            ImageWidgetClass GPDA_ProfileRankIcon {
+             ignorepointer 1
+             color 0.6 0.4 0.9 1
+             position 15 15
+             size 50 50
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+            }
+            // Rank name
+            TextWidgetClass GPDA_ProfileRankName {
+             ignorepointer 1
+             color 0.8 0.65 1 1
+             position 80 12
+             size 200 24
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             text "Rookie"
+             font "gui/fonts/metron"
+             "exact text" 1
+             "exact text size" 16
+             "text valign" center
+            }
+            // XP text
+            TextWidgetClass GPDA_ProfileXPText {
+             ignorepointer 1
+             color 0.7 0.72 0.68 1
+             position 80 38
+             size 300 18
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             text "0 / 1000 XP"
+             font "gui/fonts/metron"
+             "exact text" 1
+             "exact text size" 11
+             "text valign" center
+            }
+            // Progress bar background
+            ImageWidgetClass GPDA_ProfileXPBarBg {
+             ignorepointer 1
+             color 0.15 0.17 0.2 1
+             position 80 60
+             size 0.75 10
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 1
+            }
+            // Progress bar fill
+            ImageWidgetClass GPDA_ProfileXPBarFill {
+             ignorepointer 1
+             color 0.6 0.4 0.9 1
+             position 80 60
+             size 0.25 10
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 1
+            }
+            // Next rank label
+            TextWidgetClass GPDA_ProfileNextRank {
+             ignorepointer 1
+             color 0.55 0.58 0.52 1
+             position 0.82 12
+             size 0.16 20
+             hexactpos 0
+             vexactpos 1
+             hexactsize 0
+             vexactsize 1
+             text "Next: Soldier"
+             font "gui/fonts/metron"
+             "exact text" 1
+             "exact text size" 10
+             "text halign" right
+             "text valign" center
+            }
+           }
+          }
+          
+          // ═══════════════════════════════════════════════════════════════
+          // LICENSES SECTION - Modern card style
+          // ═══════════════════════════════════════════════════════════════
+          
+          TextWidgetClass GPDA_LicensesTitle {
+           ignorepointer 1
+           color 0.5 0.55 0.52 1
+           position 0 405
+           size 200 20
+           hexactpos 0
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           text "LICENSES"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 10
+           "text valign" center
+          }
+          
+          // License Grid - Modern cards
+          FrameWidgetClass GPDA_LicenseGrid {
+           position 0 430
+           size 1 32
+           hexactpos 0
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           {
+            // Hunting
+            FrameWidgetClass GPDA_LicenseRow1 {
+             position 0 0
+             size 0.19 32
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 1
+             {
+              ImageWidgetClass GPDA_License1Bg {
+               ignorepointer 1
+               color 0.12 0.14 0.16 1
+               position 0 0
+               size 1 1
+              }
+              ImageWidgetClass GPDA_License1Indicator {
+               ignorepointer 1
+               color 0.85 0.25 0.2 1
+               position 0 0
+               size 4 1
+               hexactpos 0
+               vexactpos 0
+               hexactsize 1
+               vexactsize 0
+              }
+              TextWidgetClass GPDA_License1Label {
+               ignorepointer 1
+               color 0.85 0.87 0.82 1
+               position 12 0
+               size 80 0.55
+               hexactpos 1
+               vexactpos 0
+               hexactsize 1
+               vexactsize 0
+               text "Hunting"
+               font "gui/fonts/metron"
+               "exact text" 1
+               "exact text size" 11
+               "text valign" bottom
+              }
+              TextWidgetClass GPDA_License1Status {
+               ignorepointer 1
+               color 0.85 0.25 0.2 1
+               position 12 0.5
+               size 80 0.45
+               hexactpos 1
+               vexactpos 0
+               hexactsize 1
+               vexactsize 0
+               text "NO"
+               font "gui/fonts/metron"
+               "exact text" 1
+               "exact text size" 10
+               "text valign" top
+              }
+             }
+            }
+            
+            // Fishing
+            FrameWidgetClass GPDA_LicenseRow2 {
+             position 0.2 0
+             size 0.19 32
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 1
+             {
+              ImageWidgetClass GPDA_License2Bg {
+               ignorepointer 1
+               color 0.12 0.14 0.16 1
+               position 0 0
+               size 1 1
+              }
+              ImageWidgetClass GPDA_License2Indicator {
+               ignorepointer 1
+               color 0.85 0.25 0.2 1
+               position 0 0
+               size 4 1
+               hexactpos 0
+               vexactpos 0
+               hexactsize 1
+               vexactsize 0
+              }
+              TextWidgetClass GPDA_License2Label {
+               ignorepointer 1
+               color 0.85 0.87 0.82 1
+               position 12 0
+               size 80 0.55
+               hexactpos 1
+               vexactpos 0
+               hexactsize 1
+               vexactsize 0
+               text "Fishing"
+               font "gui/fonts/metron"
+               "exact text" 1
+               "exact text size" 11
+               "text valign" bottom
+              }
+              TextWidgetClass GPDA_License2Status {
+               ignorepointer 1
+               color 0.85 0.25 0.2 1
+               position 12 0.5
+               size 80 0.45
+               hexactpos 1
+               vexactpos 0
+               hexactsize 1
+               vexactsize 0
+               text "NO"
+               font "gui/fonts/metron"
+               "exact text" 1
+               "exact text size" 10
+               "text valign" top
+              }
+             }
+            }
+            
+            // Zone Access
+            FrameWidgetClass GPDA_LicenseRow3 {
+             position 0.4 0
+             size 0.19 32
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 1
+             {
+              ImageWidgetClass GPDA_License3Bg {
+               ignorepointer 1
+               color 0.12 0.14 0.16 1
+               position 0 0
+               size 1 1
+              }
+              ImageWidgetClass GPDA_License3Indicator {
+               ignorepointer 1
+               color 0.85 0.25 0.2 1
+               position 0 0
+               size 4 1
+               hexactpos 0
+               vexactpos 0
+               hexactsize 1
+               vexactsize 0
+              }
+              TextWidgetClass GPDA_License3Label {
+               ignorepointer 1
+               color 0.85 0.87 0.82 1
+               position 12 0
+               size 80 0.55
+               hexactpos 1
+               vexactpos 0
+               hexactsize 1
+               vexactsize 0
+               text "Zone"
+               font "gui/fonts/metron"
+               "exact text" 1
+               "exact text size" 11
+               "text valign" bottom
+              }
+              TextWidgetClass GPDA_License3Status {
+               ignorepointer 1
+               color 0.85 0.25 0.2 1
+               position 12 0.5
+               size 80 0.45
+               hexactpos 1
+               vexactpos 0
+               hexactsize 1
+               vexactsize 0
+               text "NO"
+               font "gui/fonts/metron"
+               "exact text" 1
+               "exact text size" 10
+               "text valign" top
+              }
+             }
+            }
+            
+            // Weapons Permit
+            FrameWidgetClass GPDA_LicenseRow4 {
+             position 0.6 0
+             size 0.19 32
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 1
+             {
+              ImageWidgetClass GPDA_License4Bg {
+               ignorepointer 1
+               color 0.12 0.14 0.16 1
+               position 0 0
+               size 1 1
+              }
+              ImageWidgetClass GPDA_License4Indicator {
+               ignorepointer 1
+               color 0.85 0.25 0.2 1
+               position 0 0
+               size 4 1
+               hexactpos 0
+               vexactpos 0
+               hexactsize 1
+               vexactsize 0
+              }
+              TextWidgetClass GPDA_License4Label {
+               ignorepointer 1
+               color 0.85 0.87 0.82 1
+               position 12 0
+               size 80 0.55
+               hexactpos 1
+               vexactpos 0
+               hexactsize 1
+               vexactsize 0
+               text "Weapons"
+               font "gui/fonts/metron"
+               "exact text" 1
+               "exact text size" 11
+               "text valign" bottom
+              }
+              TextWidgetClass GPDA_License4Status {
+               ignorepointer 1
+               color 0.85 0.25 0.2 1
+               position 12 0.5
+               size 80 0.45
+               hexactpos 1
+               vexactpos 0
+               hexactsize 1
+               vexactsize 0
+               text "NO"
+               font "gui/fonts/metron"
+               "exact text" 1
+               "exact text size" 10
+               "text valign" top
+              }
+             }
+            }
+            
+            // Trading License
+            FrameWidgetClass GPDA_LicenseRow5 {
+             position 0.8 0
+             size 0.19 32
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 1
+             {
+              ImageWidgetClass GPDA_License5Bg {
+               ignorepointer 1
+               color 0.12 0.14 0.16 1
+               position 0 0
+               size 1 1
+              }
+              ImageWidgetClass GPDA_License5Indicator {
+               ignorepointer 1
+               color 0.85 0.25 0.2 1
+               position 0 0
+               size 4 1
+               hexactpos 0
+               vexactpos 0
+               hexactsize 1
+               vexactsize 0
+              }
+              TextWidgetClass GPDA_License5Label {
+               ignorepointer 1
+               color 0.85 0.87 0.82 1
+               position 12 0
+               size 80 0.55
+               hexactpos 1
+               vexactpos 0
+               hexactsize 1
+               vexactsize 0
+               text "Trading"
+               font "gui/fonts/metron"
+               "exact text" 1
+               "exact text size" 11
+               "text valign" bottom
+              }
+              TextWidgetClass GPDA_License5Status {
+               ignorepointer 1
+               color 0.85 0.25 0.2 1
+               position 12 0.5
+               size 80 0.45
+               hexactpos 1
+               vexactpos 0
+               hexactsize 1
+               vexactsize 0
+               text "NO"
+               font "gui/fonts/metron"
+               "exact text" 1
+               "exact text size" 10
+               "text valign" top
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+      
+      // ═══════════════════════════════════════════════════════════════════
+      // MAP PANEL
+      // ═══════════════════════════════════════════════════════════════════
+      FrameWidgetClass GPDA_Panel_Map {
+       visible 0
+       position 0 0
+       size 1 1
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       {
+        FrameWidgetClass GPDA_MapHeader {
+         position 0.025 0.02
+         size 0.95 0.065
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         {
+          ImageWidgetClass GPDA_MapIconBg {
+           ignorepointer 1
+           color 0.95 0.7 0.25 0.25
+           position 0 5
+           size 36 36
+           hexactpos 0
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+          }
+          
+          TextWidgetClass GPDA_MapTitle {
+           ignorepointer 1
+           color 0.98 0.78 0.3 1
+           position 48 2
+           size 200 22
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           text "Map"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 16
+           "text valign" center
+          }
+          
+          TextWidgetClass GPDA_GPSCoords {
+           ignorepointer 1
+           color 0.2 0.85 0.5 1
+           position 0.55 0.2
+           size 180 24
+           hexactpos 0
+           vexactpos 0
+           hexactsize 1
+           vexactsize 1
+           text "GPS: ---"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 10
+           "text valign" center
+          }
+          
+          ButtonWidgetClass GPDA_Btn_AutoFollow {
+           color 0.15 0.18 0.2 1
+           position 0.88 0.15
+           size 0.1 0.7
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           {
+            TextWidgetClass GPDA_Btn_AutoFollowText {
+             ignorepointer 1
+             color 1 1 1 1
+             position 0 0
+             size 1 1
+             text "AUTO"
+             font "gui/fonts/metron"
+             "exact text" 1
+             "exact text size" 9
+             "text halign" center
+             "text valign" center
+            }
+           }
+          }
+         }
+        }
+        
+        ImageWidgetClass GPDA_MapSeparator {
+         ignorepointer 1
+         color 0.95 0.7 0.25 0.25
+         position 0.025 0.095
+         size 0.95 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+        }
+        
+        MapWidgetClass GPDA_MapWidget {
+         position 0.025 0.11
+         size 0.95 0.87
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+        }
+       }
+      }
+      
+      // ═══════════════════════════════════════════════════════════════════
+      // TOP 100 PANEL
+      // ═══════════════════════════════════════════════════════════════════
+      FrameWidgetClass GPDA_Panel_Top100 {
+         visible 0
+       position 0 0
+       size 1 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         {
+        FrameWidgetClass GPDA_Top100Header {
+         position 0.025 0.02
+         size 0.95 0.065
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         {
+          ImageWidgetClass GPDA_Top100IconBg {
+           ignorepointer 1
+           color 0.95 0.7 0.25 0.25
+           position 0 5
+           size 36 36
+           hexactpos 0
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+          }
+          
+          TextWidgetClass GPDA_Top100Title {
+           ignorepointer 1
+           color 0.98 0.78 0.3 1
+           position 48 2
+           size 200 22
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           text "TOP 100"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 16
+           "text valign" center
+          }
+          
+          // Sort buttons
+          ButtonWidgetClass GPDA_BtnSortPlayers {
+           color 0.9 0.35 0.3 0.3
+           position 0.5 0.15
+           size 0.12 0.7
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           {
+            TextWidgetClass GPDA_BtnSortPlayersText {
+             ignorepointer 1
+             color 0.95 0.45 0.4 1
+             position 0 0
+             size 1 1
+             text "Players"
+             font "gui/fonts/metron"
+             "exact text" 1
+             "exact text size" 9
+             "text halign" center
+             "text valign" center
+            }
+           }
+          }
+          
+          ButtonWidgetClass GPDA_BtnSortZombies {
+           color 0.2 0.75 0.45 0.3
+           position 0.64 0.15
+           size 0.12 0.7
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           {
+            TextWidgetClass GPDA_BtnSortZombiesText {
+           ignorepointer 1
+             color 0.25 0.85 0.55 1
+             position 0 0
+             size 1 1
+             text "Zombies"
+           font "gui/fonts/metron"
+           "exact text" 1
+             "exact text size" 9
+             "text halign" center
+           "text valign" center
+          }
+           }
+          }
+          
+          ButtonWidgetClass GPDA_BtnSortTotal {
+           color 0.15 0.6 0.38 1
+           position 0.78 0.15
+           size 0.12 0.7
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           {
+            TextWidgetClass GPDA_BtnSortTotalText {
+             ignorepointer 1
+           color 1 1 1 1
+             position 0 0
+             size 1 1
+             text "Total"
+           font "gui/fonts/metron"
+           "exact text" 1
+             "exact text size" 9
+             "text halign" center
+             "text valign" center
+            }
+           }
+          }
+         }
+          }
+          
+        ImageWidgetClass GPDA_Top100Separator {
+         ignorepointer 1
+         color 0.95 0.7 0.25 0.25
+         position 0.025 0.095
+         size 0.95 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+         vexactsize 1
+          }
+          
+        TextListboxWidgetClass GPDA_Top100List {
+         position 0.025 0.11
+         size 0.95 0.87
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           scaled 1
+           style Editor
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 11
+           "row height" 16
+          }
+       }
+      }
+      
+      // ═══════════════════════════════════════════════════════════════════
+      // MESSAGES PANEL
+      // ═══════════════════════════════════════════════════════════════════
+      FrameWidgetClass GPDA_Panel_PM {
+       visible 0
+       position 0 0
+       size 1 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+       {
+        FrameWidgetClass GPDA_PMHeader {
+         position 0.025 0.02
+         size 0.95 0.065
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         {
+          ImageWidgetClass GPDA_PMIconBg {
+           ignorepointer 1
+           color 0.35 0.55 0.9 0.25
+           position 0 5
+           size 36 36
+           hexactpos 0
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+          }
+          
+          TextWidgetClass GPDA_PMTitle {
+           ignorepointer 1
+           color 0.45 0.65 0.95 1
+           position 48 2
+           size 200 22
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           text "Messages"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 16
+           "text valign" center
+          }
+         }
+        }
+        
+        ImageWidgetClass GPDA_PMSeparator {
+         ignorepointer 1
+         color 0.35 0.55 0.9 0.25
+         position 0.025 0.095
+         size 0.95 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+        }
+        
+        TextListboxWidgetClass GPDA_PMList {
+         position 0.025 0.11
+         size 0.95 0.68
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           scaled 1
+           style Editor
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 11
+           "row height" 16
+          }
+          
+        FrameWidgetClass GPDA_PMInputArea {
+         position 0.025 0.8
+         size 0.95 0.18
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           {
+          ImageWidgetClass GPDA_PMRecipientBg {
+             ignorepointer 1
+           color 0.04 0.045 0.055 1
+             position 0 0
+           size 0.35 0.42
+          }
+          EditBoxWidgetClass GPDA_PMRecipient {
+           color 0.9 0.9 0.9 1
+           position 0.015 0.06
+           size 0.32 0.3
+             font "gui/fonts/metron"
+             "exact text" 1
+           "exact text size" 10
+          }
+          TextWidgetClass GPDA_PMRecipientHint {
+           ignorepointer 1
+           color 0.4 0.45 0.42 0.6
+           position 0.02 0.06
+           size 0.3 0.3
+           text "Recipient..."
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 10
+             "text valign" center
+            }
+          
+          ImageWidgetClass GPDA_PMMessageBg {
+           ignorepointer 1
+           color 0.04 0.045 0.055 1
+           position 0 0.5
+           size 0.84 0.5
+          }
+          ImageWidgetClass GPDA_PMMessageBorder {
+           ignorepointer 1
+           color 0.35 0.55 0.9 0.4
+           position 0 0.5
+           size 0.84 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 1
+          }
+          EditBoxWidgetClass GPDA_PMMessage {
+           color 0.9 0.9 0.9 1
+           position 0.015 0.56
+           size 0.81 0.38
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 11
+          }
+          
+          ButtonWidgetClass GPDA_BtnSendPM {
+           color 0.3 0.5 0.85 1
+           position 0.86 0.5
+           size 0.14 0.5
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           {
+            TextWidgetClass GPDA_BtnSendPMText {
+             ignorepointer 1
+             color 1 1 1 1
+             position 0 0
+             size 1 1
+             text "SEND"
+             font "gui/fonts/metron"
+             "exact text" 1
+             "exact text size" 11
+             "text halign" center
+             "text valign" center
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+      
+      // ═══════════════════════════════════════════════════════════════════
+      // GROUPS PANEL
+      // ═══════════════════════════════════════════════════════════════════
+      FrameWidgetClass GPDA_Panel_Groups {
+       visible 0
+       position 0 0
+       size 1 1
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       {
+        // Header
+        FrameWidgetClass GPDA_GroupsHeader {
+         position 0.025 0.02
+         size 0.95 0.065
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         {
+          ImageWidgetClass GPDA_GroupsIconBg {
+           ignorepointer 1
+           color 0.85 0.5 0.2 0.25
+           position 0 5
+           size 36 36
+           hexactpos 0
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+      }
+      
+          TextWidgetClass GPDA_GroupsTitle {
+       ignorepointer 1
+           color 0.95 0.6 0.25 1
+           position 48 2
+           size 200 22
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           text "Groups"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 16
+           "text valign" center
+          }
+          
+          TextWidgetClass GPDA_GroupsSubtitle {
+           ignorepointer 1
+           color 0.5 0.55 0.52 1
+           position 48 26
+           size 280 14
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           text "Manage your faction"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 9
+           "text valign" center
+          }
+         }
+        }
+        
+        ImageWidgetClass GPDA_GroupsSeparator {
+         ignorepointer 1
+         color 0.85 0.5 0.2 0.25
+         position 0.025 0.095
+         size 0.95 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+        }
+        
+        // Group info section - Modern card design
+        FrameWidgetClass GPDA_GroupInfoSection {
+         position 0.025 0.12
+         size 0.95 0.14
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           {
+          TextWidgetClass GPDA_GroupInfoTitle {
+             ignorepointer 1
+           color 0.5 0.55 0.52 1
+           position 0 0
+           size 150 18
+           hexactpos 0
+           vexactpos 0
+           hexactsize 1
+           vexactsize 1
+           text "GROUP INFO"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 9
+           "text valign" center
+          }
+          
+          // Group Name Card
+          FrameWidgetClass GPDA_GroupNameCard {
+           position 0 22
+           size 0.48 50
+           hexactpos 0
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           {
+            ImageWidgetClass GPDA_GroupNameCardBg {
+             ignorepointer 1
+             color 0.1 0.12 0.14 1
+             position 0 0
+             size 1 1
+            }
+            ImageWidgetClass GPDA_GroupNameCardAccent {
+             ignorepointer 1
+             color 0.95 0.55 0.2 1
+             position 0 0
+             size 4 1
+             hexactpos 0
+             vexactpos 0
+             hexactsize 1
+             vexactsize 0
+            }
+            TextWidgetClass GPDA_GroupLabelName {
+             ignorepointer 1
+             color 0.6 0.62 0.6 1
+             position 14 5
+             size 100 18
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             text "Faction"
+             font "gui/fonts/metron"
+             "exact text" 1
+             "exact text size" 9
+             "text valign" center
+            }
+            TextWidgetClass GPDA_GroupValueName {
+             ignorepointer 1
+             color 0.95 0.6 0.25 1
+             position 14 24
+             size 200 22
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             text "No Group"
+             font "gui/fonts/metron"
+             "exact text" 1
+             "exact text size" 14
+             "text valign" center
+            }
+           }
+          }
+          
+          // Online Members Card
+          FrameWidgetClass GPDA_GroupOnlineCard {
+           position 0.52 22
+           size 0.23 50
+           hexactpos 0
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           {
+            ImageWidgetClass GPDA_GroupOnlineCardBg {
+             ignorepointer 1
+             color 0.1 0.12 0.14 1
+             position 0 0
+             size 1 1
+            }
+            ImageWidgetClass GPDA_GroupOnlineCardAccent {
+             ignorepointer 1
+             color 0.2 0.75 0.45 1
+             position 0 0
+             size 4 1
+             hexactpos 0
+             vexactpos 0
+             hexactsize 1
+             vexactsize 0
+            }
+            TextWidgetClass GPDA_GroupLabelOnline {
+             ignorepointer 1
+             color 0.6 0.62 0.6 1
+             position 14 5
+             size 80 18
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             text "Online"
+             font "gui/fonts/metron"
+             "exact text" 1
+             "exact text size" 9
+             "text valign" center
+            }
+            TextWidgetClass GPDA_GroupOnlineText {
+             ignorepointer 1
+             color 0.25 0.85 0.55 1
+             position 14 24
+             size 80 22
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             text "0 / 0"
+             font "gui/fonts/metron"
+             "exact text" 1
+             "exact text size" 14
+             "text valign" center
+            }
+           }
+          }
+          
+          // Points Card
+          FrameWidgetClass GPDA_GroupPointsCard {
+           position 0.77 22
+           size 0.23 50
+           hexactpos 0
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           {
+            ImageWidgetClass GPDA_GroupPointsCardBg {
+             ignorepointer 1
+             color 0.1 0.12 0.14 1
+             position 0 0
+             size 1 1
+            }
+            ImageWidgetClass GPDA_GroupPointsCardAccent {
+             ignorepointer 1
+             color 1.0 0.7 0.2 1
+             position 0 0
+             size 4 1
+             hexactpos 0
+             vexactpos 0
+             hexactsize 1
+             vexactsize 0
+            }
+            TextWidgetClass GPDA_GroupLabelPoints {
+             ignorepointer 1
+             color 0.6 0.62 0.6 1
+             position 14 5
+             size 80 18
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             text "Points"
+             font "gui/fonts/metron"
+             "exact text" 1
+             "exact text size" 9
+             "text valign" center
+            }
+            TextWidgetClass GPDA_GroupPointsValue {
+             ignorepointer 1
+             color 1.0 0.7 0.2 1
+             position 14 24
+             size 80 22
+             hexactpos 1
+             vexactpos 1
+             hexactsize 1
+             vexactsize 1
+             text "0"
+             font "gui/fonts/metron"
+             "exact text" 1
+             "exact text size" 14
+             "text valign" center
+            }
+           }
+          }
+         }
+        }
+        
+        // ═══════════════════════════════════════════════════════════════
+        // CAPTURED ZONES SECTION
+        // ═══════════════════════════════════════════════════════════════
+        FrameWidgetClass GPDA_GroupZonesSection {
+         position 0.025 0.27
+         size 0.45 0.13
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         {
+          TextWidgetClass GPDA_GroupZonesTitle {
+           ignorepointer 1
+           color 0.5 0.55 0.52 1
+           position 0 0
+           size 180 18
+           hexactpos 0
+           vexactpos 0
+           hexactsize 1
+           vexactsize 1
+           text "CAPTURED ZONES"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 9
+           "text valign" center
+          }
+          
+          FrameWidgetClass GPDA_GroupZonesCard {
+           position 0 22
+           size 1 74
+           hexactpos 0
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           {
+            ImageWidgetClass GPDA_GroupZonesCardBg {
+             ignorepointer 1
+             color 0.06 0.07 0.08 1
+             position 0 0
+             size 1 1
+            }
+            TextListboxWidgetClass GPDA_GroupZonesList {
+             position 5 5
+             size 0.96 64
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 1
+             color 0.08 0.1 0.12 1
+             font "gui/fonts/metron"
+             "exact text" 1
+             "exact text size" 11
+             "row height" 20
+            }
+           }
+          }
+         }
+        }
+      
+        // Member actions section - Modern design
+        FrameWidgetClass GPDA_MemberActionsSection {
+         position 0.5 0.27
+         size 0.475 0.13
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           {
+          TextWidgetClass GPDA_MemberActionsTitle {
+             ignorepointer 1
+           color 0.5 0.55 0.52 1
+           position 0 0
+           size 180 18
+           hexactpos 0
+           vexactpos 0
+           hexactsize 1
+           vexactsize 1
+           text "MEMBER ACTIONS"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 9
+           "text valign" center
+          }
+          
+          ImageWidgetClass GPDA_Steam64InputBorder {
+           ignorepointer 1
+           color 0.85 0.5 0.2 0.5
+           position 0 22
+           size 1 2
+           hexactpos 0
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+          }
+          
+          ImageWidgetClass GPDA_Steam64InputBg {
+           ignorepointer 1
+           color 0.08 0.09 0.11 1
+           position 0 24
+           size 1 32
+           hexactpos 0
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+          }
+          
+          EditBoxWidgetClass GPDA_Steam64Input {
+           color 0.95 0.95 0.95 1
+           position 0.015 28
+           size 0.97 24
+           hexactpos 0
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 12
+          }
+          
+          // Action buttons - Modern style
+          ButtonWidgetClass GPDA_BtnKickMember {
+           color 0.65 0.18 0.15 1
+           position 0 62
+           size 0.48 34
+           hexactpos 0
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           {
+            TextWidgetClass GPDA_BtnKickMemberText {
+             ignorepointer 1
+             color 1 1 1 1
+             position 0 0
+             size 1 1
+             text "KICK MEMBER"
+             font "gui/fonts/metron"
+             "exact text" 1
+             "exact text size" 11
+             "text halign" center
+             "text valign" center
+            }
+           }
+          }
+          
+          ButtonWidgetClass GPDA_BtnAddMember {
+           color 0.15 0.55 0.35 1
+           position 0.52 62
+           size 0.48 34
+           hexactpos 0
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           {
+            TextWidgetClass GPDA_BtnAddMemberText {
+             ignorepointer 1
+             color 1 1 1 1
+             position 0 0
+             size 1 1
+             text "ADD MEMBER"
+             font "gui/fonts/metron"
+             "exact text" 1
+             "exact text size" 11
+             "text halign" center
+             "text valign" center
+            }
+           }
+          }
+         }
+        }
+        
+        // Members list section
+        FrameWidgetClass GPDA_MembersListSection {
+         position 0.025 0.41
+         size 0.95 0.57
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         {
+          TextWidgetClass GPDA_MembersListTitle {
+         ignorepointer 1
+         color 0.5 0.55 0.52 1
+           position 0 0
+           size 150 18
+         hexactpos 0
+         vexactpos 0
+         hexactsize 1
+           vexactsize 1
+           text "MEMBERS"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 9
+           "text valign" center
+          }
+          
+          // Column headers
+          TextWidgetClass GPDA_ColHeaderName {
+           ignorepointer 1
+           color 0.6 0.62 0.6 1
+           position 0 22
+           size 200 18
+           hexactpos 0
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           text "Name"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 9
+           "text valign" center
+          }
+          TextWidgetClass GPDA_ColHeaderSteam {
+           ignorepointer 1
+           color 0.6 0.62 0.6 1
+           position 0.6 22
+           size 0.4 18
+           hexactpos 0
+           vexactpos 1
+         hexactsize 0
+         vexactsize 1
+           text "Steam64"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 9
+           "text halign" right
+           "text valign" center
+          }
+          
+          ImageWidgetClass GPDA_MembersListBg {
+           ignorepointer 1
+           color 0.04 0.045 0.055 1
+           position 0 44
+           size 1 0.85
+           hexactpos 0
+           vexactpos 1
+           hexactsize 0
+         vexactsize 0
+        }
+        
+          TextListboxWidgetClass GPDA_MembersList {
+           position 0 44
+           size 1 0.85
+           hexactpos 0
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+           scaled 1
+           style Editor
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 11
+           "row height" 16
+          }
+          
+          // Online counter
+          TextWidgetClass GPDA_GroupOnlineText {
+           ignorepointer 1
+           color 0.25 0.85 0.55 1
+           position 0 0.92
+           size 1 0.06
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+           text "Online: 0 / 0"
+         font "gui/fonts/metron"
+         "exact text" 1
+           "exact text size" 10
+           "text halign" center
+         "text valign" center
+        }
+         }
+        }
+       }
+      }
+      
+      // ═══════════════════════════════════════════════════════════════════════
+      // DATABASE PANEL (Military Only)
+      // ═══════════════════════════════════════════════════════════════════════
+      FrameWidgetClass GPDA_Panel_Database {
+       visible 0
+       position 0 0
+       size 1 1
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       {
+        // Header
+        FrameWidgetClass GPDA_DatabaseHeader {
+         position 0.025 0.02
+         size 0.95 0.065
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         {
+          ImageWidgetClass GPDA_DatabaseIconBg {
+           ignorepointer 1
+           color 0.85 0.25 0.25 0.25
+           position 0 5
+           size 36 36
+           hexactpos 0
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+          }
+          
+          TextWidgetClass GPDA_DatabaseTitle {
+           ignorepointer 1
+           color 0.95 0.35 0.35 1
+           position 48 2
+           size 200 22
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           text "Database"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 16
+           "text valign" center
+        }
+          
+          TextWidgetClass GPDA_DatabaseSubtitle {
+         ignorepointer 1
+         color 0.5 0.55 0.52 1
+           position 48 26
+           size 280 14
+         hexactpos 1
+           vexactpos 1
+         hexactsize 1
+           vexactsize 1
+           text "Military Access Only"
+         font "gui/fonts/metron"
+         "exact text" 1
+           "exact text size" 9
+           "text valign" center
+          }
+         }
+        }
+        
+        ImageWidgetClass GPDA_DatabaseSeparator {
+         ignorepointer 1
+         color 0.85 0.25 0.25 0.25
+         position 0.025 0.095
+         size 0.95 1
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 1
+        }
+        
+        // Search section
+        FrameWidgetClass GPDA_SearchSection {
+         position 0.025 0.12
+         size 0.95 0.08
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+       {
+          TextWidgetClass GPDA_SearchLabel {
+         ignorepointer 1
+         color 0.5 0.55 0.52 1
+           position 0 0
+           size 200 18
+           hexactpos 0
+           vexactpos 0
+           hexactsize 1
+           vexactsize 1
+           text "SEARCH PLAYER"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 9
+           "text valign" center
+          }
+          
+          ImageWidgetClass GPDA_SearchInputBg {
+           ignorepointer 1
+           color 0.08 0.09 0.1 1
+           position 0 22
+           size 0.7 30
+           hexactpos 0
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+          }
+          ImageWidgetClass GPDA_SearchInputBorder {
+           ignorepointer 1
+           color 0.85 0.25 0.25 0.4
+           position 0 22
+           size 0.7 2
+           hexactpos 0
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+          }
+          
+          EditBoxWidgetClass GPDA_SearchInput {
+           position 8 24
+           size 0.68 26
+         hexactpos 1
+         vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 12
+          }
+          
+          ButtonWidgetClass GPDA_BtnSearch {
+           color 0.85 0.25 0.25 1
+           position 0.72 22
+           size 0.28 30
+           hexactpos 0
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           {
+            TextWidgetClass GPDA_BtnSearchText {
+             ignorepointer 1
+             color 1 1 1 1
+             position 0 0
+             size 1 1
+             text "SEARCH"
+             font "gui/fonts/metron"
+             "exact text" 1
+             "exact text size" 11
+             "text halign" center
+             "text valign" center
+            }
+           }
+          }
+         }
+        }
+        
+        // Results section
+        FrameWidgetClass GPDA_ResultsSection {
+         position 0.025 0.22
+         size 0.45 0.35
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         {
+          TextWidgetClass GPDA_ResultsLabel {
+           ignorepointer 1
+           color 0.5 0.55 0.52 1
+           position 0 0
+           size 200 18
+           hexactpos 0
+           vexactpos 0
+         hexactsize 1
+         vexactsize 1
+           text "SEARCH RESULTS"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 9
+           "text valign" center
+          }
+          
+          ImageWidgetClass GPDA_ResultsListBg {
+           ignorepointer 1
+           color 0.04 0.045 0.055 1
+           position 0 22
+           size 1 0.9
+           hexactpos 0
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+          }
+          
+          TextListboxWidgetClass GPDA_SearchResultsList {
+           position 0 22
+           size 1 0.9
+           hexactpos 0
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 10
+           "row height" 14
+          }
+         }
+        }
+        
+        // Player dossier section
+        FrameWidgetClass GPDA_DossierSection {
+         position 0.5 0.22
+         size 0.475 0.35
+         hexactpos 0
+         vexactpos 0
+         hexactsize 0
+         vexactsize 0
+         {
+          TextWidgetClass GPDA_DossierLabel {
+         ignorepointer 1
+         color 0.5 0.55 0.52 1
+           position 0 0
+           size 200 18
+           hexactpos 0
+         vexactpos 0
+         hexactsize 1
+           vexactsize 1
+           text "PLAYER DOSSIER"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 9
+           "text valign" center
+          }
+          
+          ImageWidgetClass GPDA_DossierBg {
+           ignorepointer 1
+           color 0.04 0.045 0.055 1
+           position 0 22
+           size 1 0.9
+           hexactpos 0
+           vexactpos 1
+           hexactsize 0
+         vexactsize 0
+          }
+          
+          // Dossier content
+          TextWidgetClass GPDA_DossierCallsign {
+           ignorepointer 1
+           color 1 1 1 1
+           position 10 30
+           size 0.9 22
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           text "Callsign: -"
+         font "gui/fonts/metron"
+         "exact text" 1
+         "exact text size" 12
+         "text valign" center
+        }
+          
+          TextWidgetClass GPDA_DossierSteam64 {
+           ignorepointer 1
+           color 0.6 0.62 0.6 1
+           position 10 54
+           size 0.9 18
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           text "Steam64: -"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 10
+           "text valign" center
+          }
+          
+          TextWidgetClass GPDA_DossierAge {
+           ignorepointer 1
+           color 0.6 0.62 0.6 1
+           position 10 74
+           size 0.9 18
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           text "Age: -"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 10
+           "text valign" center
+          }
+          
+          TextWidgetClass GPDA_DossierGroup {
+           ignorepointer 1
+           color 0.95 0.6 0.25 1
+           position 10 94
+           size 0.9 18
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           text "Group: -"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 10
+           "text valign" center
+          }
+          
+          TextWidgetClass GPDA_DossierBio {
+           ignorepointer 1
+           color 0.5 0.55 0.52 1
+           position 10 118
+           size 0.9 40
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           text ""
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 9
+           "text valign" top
+          }
+         }
+          }
+          
+        // Licenses section
+        FrameWidgetClass GPDA_LicensesSection {
+         position 0.025 0.58
+         size 0.95 0.38
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           {
+          TextWidgetClass GPDA_LicensesLabel {
+         ignorepointer 1
+         color 0.5 0.55 0.52 1
+           position 0 0
+           size 200 18
+           hexactpos 0
+           vexactpos 0
+           hexactsize 1
+           vexactsize 1
+           text "LICENSES"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 9
+           "text valign" center
+          }
+          
+          // License: Hunting
+          FrameWidgetClass GPDA_LicenseHunting {
+           position 0 28
+           size 0.48 36
+           hexactpos 0
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           {
+            ImageWidgetClass GPDA_LicenseHuntingBg {
+             ignorepointer 1
+             color 0.06 0.07 0.08 1
+             position 0 0
+             size 1 1
+            }
+            TextWidgetClass GPDA_LicenseHuntingLabel {
+             ignorepointer 1
+             color 0.8 0.82 0.8 1
+             position 12 0
+             size 0.5 1
+         hexactpos 1
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             text "Hunting License"
+             font "gui/fonts/metron"
+             "exact text" 1
+             "exact text size" 11
+             "text valign" center
+            }
+            TextWidgetClass GPDA_LicenseHuntingStatus {
+             ignorepointer 1
+             color 0.9 0.3 0.3 1
+             position 0.5 0
+             size 0.25 1
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             text "NO"
+             font "gui/fonts/metron"
+             "exact text" 1
+             "exact text size" 11
+             "text halign" center
+             "text valign" center
+            }
+            ButtonWidgetClass GPDA_BtnLicenseHunting {
+             color 0.25 0.75 0.45 1
+             position 0.78 4
+             size 0.2 28
+             hexactpos 0
+         vexactpos 1
+             hexactsize 0
+         vexactsize 1
+             {
+              TextWidgetClass GPDA_BtnLicenseHuntingText {
+             ignorepointer 1
+             color 1 1 1 1
+             position 0 0
+             size 1 1
+               text "ISSUE"
+               font "gui/fonts/metron"
+               "exact text" 1
+               "exact text size" 9
+               "text halign" center
+               "text valign" center
+              }
+             }
+            }
+           }
+          }
+          
+          // License: Fishing
+          FrameWidgetClass GPDA_LicenseFishing {
+           position 0.52 28
+           size 0.48 36
+           hexactpos 0
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           {
+            ImageWidgetClass GPDA_LicenseFishingBg {
+         ignorepointer 1
+             color 0.06 0.07 0.08 1
+             position 0 0
+             size 1 1
+            }
+            TextWidgetClass GPDA_LicenseFishingLabel {
+             ignorepointer 1
+             color 0.8 0.82 0.8 1
+             position 12 0
+             size 0.5 1
+         hexactpos 1
+         vexactpos 0
+             hexactsize 0
+         vexactsize 0
+             text "Fishing License"
+         font "gui/fonts/metron"
+         "exact text" 1
+             "exact text size" 11
+         "text valign" center
+        }
+            TextWidgetClass GPDA_LicenseFishingStatus {
+             ignorepointer 1
+             color 0.9 0.3 0.3 1
+             position 0.5 0
+             size 0.25 1
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             text "NO"
+             font "gui/fonts/metron"
+             "exact text" 1
+             "exact text size" 11
+             "text halign" center
+             "text valign" center
+            }
+            ButtonWidgetClass GPDA_BtnLicenseFishing {
+             color 0.25 0.75 0.45 1
+             position 0.78 4
+             size 0.2 28
+             hexactpos 0
+             vexactpos 1
+             hexactsize 0
+             vexactsize 1
+             {
+              TextWidgetClass GPDA_BtnLicenseFishingText {
+               ignorepointer 1
+               color 1 1 1 1
+               position 0 0
+               size 1 1
+               text "ISSUE"
+               font "gui/fonts/metron"
+               "exact text" 1
+               "exact text size" 9
+               "text halign" center
+               "text valign" center
+           }
+          }
+         }
+        }
+       }
+          
+          // License: Zone Access
+          FrameWidgetClass GPDA_LicenseZone {
+           position 0 70
+           size 0.48 36
+           hexactpos 0
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           {
+            ImageWidgetClass GPDA_LicenseZoneBg {
+       ignorepointer 1
+             color 0.06 0.07 0.08 1
+             position 0 0
+             size 1 1
+            }
+            TextWidgetClass GPDA_LicenseZoneLabel {
+             ignorepointer 1
+             color 0.8 0.82 0.8 1
+             position 12 0
+             size 0.5 1
+             hexactpos 1
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             text "Zone Access"
+       font "gui/fonts/metron"
+       "exact text" 1
+             "exact text size" 11
+             "text valign" center
+            }
+            TextWidgetClass GPDA_LicenseZoneStatus {
+             ignorepointer 1
+             color 0.9 0.3 0.3 1
+             position 0.5 0
+             size 0.25 1
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             text "NO"
+             font "gui/fonts/metron"
+             "exact text" 1
+             "exact text size" 11
+       "text halign" center
+       "text valign" center
+      }
+            ButtonWidgetClass GPDA_BtnLicenseZone {
+             color 0.25 0.75 0.45 1
+             position 0.78 4
+             size 0.2 28
+             hexactpos 0
+             vexactpos 1
+             hexactsize 0
+             vexactsize 1
+             {
+              TextWidgetClass GPDA_BtnLicenseZoneText {
+               ignorepointer 1
+               color 1 1 1 1
+               position 0 0
+               size 1 1
+               text "ISSUE"
+               font "gui/fonts/metron"
+               "exact text" 1
+               "exact text size" 9
+               "text halign" center
+               "text valign" center
+              }
+             }
+            }
+           }
+          }
+          
+          // License: Weapons
+          FrameWidgetClass GPDA_LicenseWeapons {
+           position 0.52 70
+           size 0.48 36
+     hexactpos 0
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           {
+            ImageWidgetClass GPDA_LicenseWeaponsBg {
+       ignorepointer 1
+             color 0.06 0.07 0.08 1
+             position 0 0
+             size 1 1
+            }
+            TextWidgetClass GPDA_LicenseWeaponsLabel {
+             ignorepointer 1
+             color 0.8 0.82 0.8 1
+             position 12 0
+             size 0.5 1
+             hexactpos 1
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+             text "Weapons Permit"
+       font "gui/fonts/metron"
+       "exact text" 1
+             "exact text size" 11
+             "text valign" center
+            }
+            TextWidgetClass GPDA_LicenseWeaponsStatus {
+             ignorepointer 1
+             color 0.9 0.3 0.3 1
+             position 0.5 0
+             size 0.25 1
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             text "NO"
+             font "gui/fonts/metron"
+             "exact text" 1
+             "exact text size" 11
+       "text halign" center
+       "text valign" center
+      }
+            ButtonWidgetClass GPDA_BtnLicenseWeapons {
+             color 0.25 0.75 0.45 1
+             position 0.78 4
+             size 0.2 28
+             hexactpos 0
+             vexactpos 1
+             hexactsize 0
+             vexactsize 1
+             {
+              TextWidgetClass GPDA_BtnLicenseWeaponsText {
+       ignorepointer 1
+               color 1 1 1 1
+       position 0 0
+       size 1 1
+               text "ISSUE"
+               font "gui/fonts/metron"
+               "exact text" 1
+               "exact text size" 9
+               "text halign" center
+               "text valign" center
+              }
+             }
+            }
+           }
+          }
+          
+          // License: Trading
+          FrameWidgetClass GPDA_LicenseTrading {
+           position 0 112
+           size 0.48 36
+           hexactpos 0
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           {
+            ImageWidgetClass GPDA_LicenseTradingBg {
+       ignorepointer 1
+             color 0.06 0.07 0.08 1
+       position 0 0
+       size 1 1
+            }
+            TextWidgetClass GPDA_LicenseTradingLabel {
+             ignorepointer 1
+             color 0.8 0.82 0.8 1
+             position 12 0
+             size 0.5 1
+       hexactpos 1
+       vexactpos 0
+             hexactsize 0
+       vexactsize 0
+             text "Trading License"
+             font "gui/fonts/metron"
+             "exact text" 1
+             "exact text size" 11
+             "text valign" center
+            }
+            TextWidgetClass GPDA_LicenseTradingStatus {
+             ignorepointer 1
+             color 0.9 0.3 0.3 1
+             position 0.5 0
+             size 0.25 1
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             text "NO"
+             font "gui/fonts/metron"
+             "exact text" 1
+             "exact text size" 11
+             "text halign" center
+             "text valign" center
+            }
+            ButtonWidgetClass GPDA_BtnLicenseTrading {
+             color 0.25 0.75 0.45 1
+             position 0.78 4
+             size 0.2 28
+             hexactpos 0
+             vexactpos 1
+             hexactsize 0
+             vexactsize 1
+             {
+              TextWidgetClass GPDA_BtnLicenseTradingText {
+               ignorepointer 1
+               color 1 1 1 1
+               position 0 0
+               size 1 1
+               text "ISSUE"
+               font "gui/fonts/metron"
+               "exact text" 1
+               "exact text size" 9
+               "text halign" center
+               "text valign" center
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+      
+      // ═══════════════════════════════════════════════════════════════════════
+      // ═══════════════════════════════════════════════════════════════════════
+      // RANK PANEL
+      // ═══════════════════════════════════════════════════════════════════════
+      FrameWidgetClass GPDA_Panel_Rank {
+       visible 0
+       position 0 0
+       size 1 1
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       {
+        // Header
+        FrameWidgetClass GPDA_RankHeader {
+         position 0.025 0.02
+         size 0.95 0.065
+         {
+          ImageWidgetClass GPDA_RankIconBg {
+         ignorepointer 1
+           color 0.6 0.4 0.9 0.25
+           position 0 5
+           size 45 45
+           hexactpos 0
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+        }
+          TextWidgetClass GPDA_RankTitle {
+         ignorepointer 1
+           color 0.6 0.4 0.9 1
+           position 55 0
+           size 200 1
+         hexactpos 1
+         vexactpos 0
+         hexactsize 1
+         vexactsize 0
+           text "RANK SYSTEM"
+         font "gui/fonts/metron"
+         "exact text" 1
+           "exact text size" 16
+         "text valign" center
+        }
+          TextWidgetClass GPDA_RankSubtitle {
+           ignorepointer 1
+           color 0.6 0.62 0.58 1
+           position 55 26
+           size 300 20
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           text "Your progress and achievements"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 10
+          }
+         }
+        }
+        
+        // Current Rank Card
+        FrameWidgetClass GPDA_CurrentRankCard {
+         position 0.025 0.12
+         size 0.95 0.25
+         {
+          ImageWidgetClass GPDA_CurrentRankBg {
+           ignorepointer 1
+           color 0.06 0.07 0.08 1
+           position 0 0
+           size 1 1
+          }
+          ImageWidgetClass GPDA_CurrentRankAccent {
+           ignorepointer 1
+           color 0.6 0.4 0.9 1
+           position 0 0
+           size 4 1
+       hexactpos 0
+       vexactpos 0
+           hexactsize 1
+       vexactsize 0
+          }
+          TextWidgetClass GPDA_CurrentRankLabel {
+           ignorepointer 1
+           color 0.5 0.52 0.48 1
+           position 20 12
+           size 200 20
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           text "CURRENT RANK"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 10
+          }
+          TextWidgetClass GPDA_CurrentRankName {
+           ignorepointer 1
+           color 0.6 0.4 0.9 1
+           position 20 35
+           size 300 30
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           text "Novice"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 22
+          }
+          TextWidgetClass GPDA_CurrentXPLabel {
+           ignorepointer 1
+           color 0.5 0.52 0.48 1
+           position 20 75
+           size 200 20
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           text "EXPERIENCE"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 10
+          }
+          TextWidgetClass GPDA_CurrentXPValue {
+           ignorepointer 1
+           color 1 1 1 1
+           position 20 95
+           size 300 24
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           text "1,250 XP"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 16
+          }
+         }
+        }
+        
+        // Progress to next rank
+        FrameWidgetClass GPDA_NextRankCard {
+         position 0.025 0.4
+         size 0.95 0.18
+         {
+          ImageWidgetClass GPDA_NextRankBg {
+         ignorepointer 1
+           color 0.06 0.07 0.08 1
+           position 0 0
+           size 1 1
+          }
+          TextWidgetClass GPDA_NextRankLabel {
+           ignorepointer 1
+           color 0.5 0.52 0.48 1
+           position 20 12
+           size 200 20
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+           text "NEXT RANK"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 10
+        }
+          TextWidgetClass GPDA_NextRankName {
+         ignorepointer 1
+           color 0.8 0.82 0.78 1
+           position 20 32
+           size 200 24
+         hexactpos 1
+           vexactpos 1
+         hexactsize 1
+           vexactsize 1
+           text "Experienced"
+         font "gui/fonts/metron"
+         "exact text" 1
+           "exact text size" 14
+          }
+          // Progress bar background
+          ImageWidgetClass GPDA_RankProgressBg {
+           ignorepointer 1
+           color 0.08 0.1 0.12 1
+           position 20 65
+           size 0.9 16
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+          }
+          // Progress bar fill
+          ImageWidgetClass GPDA_RankProgressFill {
+           ignorepointer 1
+           color 0.6 0.4 0.9 1
+           position 20 65
+           size 0.35 16
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+          }
+          TextWidgetClass GPDA_RankProgressText {
+           ignorepointer 1
+           color 1 1 1 1
+           position 0.65 65
+           size 0.3 16
+           hexactpos 0
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           text "1,250 / 3,000 XP"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 10
+           "text halign" right
+         "text valign" center
+        }
+       }
+      }
+      
+        // How to earn XP
+        TextWidgetClass GPDA_XPHowToLabel {
+         ignorepointer 1
+         color 0.5 0.52 0.48 1
+         position 0.025 0.62
+         size 0.3 0.04
+         text "HOW TO EARN XP"
+         font "gui/fonts/metron"
+         "exact text" 1
+         "exact text size" 10
+        }
+        FrameWidgetClass GPDA_XPHowToCard {
+         position 0.025 0.67
+         size 0.95 0.28
+         {
+          ImageWidgetClass GPDA_XPHowToBg {
+           ignorepointer 1
+           color 0.06 0.07 0.08 1
+           position 0 0
+           size 1 1
+          }
+          MultilineTextWidgetClass GPDA_XPHowToText {
+           ignorepointer 1
+           color 0.7 0.72 0.68 1
+           position 20 15
+           size 0.9 0.85
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+           text "• Kill zombies: +10 XP\n• Kill animals: +15-50 XP\n• Complete quests: +50-500 XP\n• Discover locations: +25 XP\n• Survive each hour: +5 XP"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 11
+          }
+         }
+        }
+       }
+      }
+      
+      // ═══════════════════════════════════════════════════════════════════════
+      // SUPPORT PANEL (Tickets) - Modern Split Layout
+      // ═══════════════════════════════════════════════════════════════════════
+      FrameWidgetClass GPDA_Panel_Support {
+       visible 0
+       position 0 0
+       size 1 1
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       {
+        // Header
+        FrameWidgetClass GPDA_SupportHeader {
+         position 0.025 0.02
+         size 0.95 0.06
+         {
+          ImageWidgetClass GPDA_SupportIconBg {
+         ignorepointer 1
+           color 0.2 0.6 0.85 0.3
+           position 0 5
+           size 40 40
+           hexactpos 0
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+        }
+          TextWidgetClass GPDA_SupportTitle {
+         ignorepointer 1
+           color 0.3 0.75 0.95 1
+           position 50 4
+           size 250 20
+         hexactpos 1
+         vexactpos 1
+         hexactsize 1
+         vexactsize 1
+           text "SUPPORT CENTER"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 14
+           "text valign" center
+          }
+          TextWidgetClass GPDA_SupportSubtitle {
+           ignorepointer 1
+           color 0.5 0.55 0.52 1
+           position 50 26
+           size 350 16
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+           text "Create tickets & chat with administration"
+           font "gui/fonts/metron"
+           "exact text" 1
+           "exact text size" 8
+          }
+         }
+        }
+        
+        // ═══════════════════════════════════════════════════════════════
+        // LEFT COLUMN - CREATE TICKET + TICKETS LIST
+        // ═══════════════════════════════════════════════════════════════
+        FrameWidgetClass GPDA_SupportLeftColumn {
+         position 0.025 0.09
+         size 0.32 0.89
+         {
+          // Create Ticket Compact Section
+        TextWidgetClass GPDA_CreateTicketLabel {
+         ignorepointer 1
+           color 0.3 0.75 0.95 0.8
+           position 0 0
+           size 1 20
+           hexactpos 0
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           text "NEW TICKET"
+         font "gui/fonts/metron"
+         "exact text" 1
+           "exact text size" 11
+        }
+        
+        FrameWidgetClass GPDA_CreateTicketCard {
+           position 0 25
+           size 1 0.28
+           hexactpos 0
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+         {
+          ImageWidgetClass GPDA_CreateTicketBg {
+           ignorepointer 1
+             color 0.05 0.06 0.07 1
+           position 0 0
+           size 1 1
+          }
+          TextWidgetClass GPDA_TicketTitleLabel {
+           ignorepointer 1
+             color 0.5 0.55 0.52 1
+             position 10 8
+             size 80 16
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+             text "Subject"
+           font "gui/fonts/metron"
+           "exact text" 1
+             "exact text size" 9
+          }
+          EditBoxWidgetClass GPDA_TicketTitleInput {
+             position 10 24
+             size 0.92 26
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           color 0.08 0.1 0.12 1
+           font "gui/fonts/metron"
+           "text halign" left
+           "text valign" center
+           "exact text" 1
+             "exact text size" 10
+          }
+          TextWidgetClass GPDA_TicketDescLabel {
+           ignorepointer 1
+             color 0.5 0.55 0.52 1
+             position 10 58
+             size 80 16
+           hexactpos 1
+           vexactpos 1
+           hexactsize 1
+           vexactsize 1
+             text "Description"
+           font "gui/fonts/metron"
+           "exact text" 1
+             "exact text size" 9
+          }
+          MultilineEditBoxWidgetClass GPDA_TicketDescInput {
+             position 10 74
+             size 0.92 0.25
+           hexactpos 1
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+           color 0.08 0.1 0.12 1
+           font "gui/fonts/metron"
+           "text halign" left
+           "text valign" top
+           "exact text" 1
+             "exact text size" 10
+          }
+          ButtonWidgetClass GPDA_BtnCreateTicket {
+             color 0.2 0.65 0.85 1
+             position 0.02 0.6
+             size 0.96 0.25
+           hexactpos 0
+             vexactpos 0
+           hexactsize 0
+             vexactsize 0
+           {
+            TextWidgetClass GPDA_BtnCreateTicketText {
+             ignorepointer 1
+             color 1 1 1 1
+             position 0 0
+             size 1 1
+               text "CREATE TICKET"
+         font "gui/fonts/metron"
+         "exact text" 1
+               "exact text size" 10
+             "text halign" center
+         "text valign" center
+        }
+       }
+      }
+         }
+        }
+        
+          // My Tickets List
+        TextWidgetClass GPDA_MyTicketsLabel {
+         ignorepointer 1
+           color 0.3 0.75 0.95 0.8
+           position 0 0.32
+           size 1 20
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 1
+         text "MY TICKETS"
+         font "gui/fonts/metron"
+         "exact text" 1
+           "exact text size" 11
+        }
+        
+        ScrollWidgetClass GPDA_MyTicketsScroll {
+           position 0 0.36
+           size 1 0.64
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           style Default
+           "Scrollbar V" 1
+           {
+            WrapSpacerWidgetClass GPDA_MyTicketsContent {
+             position 0 0
+             size 1 1
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+            }
+           }
+          }
+         }
+        }
+        
+        // ═══════════════════════════════════════════════════════════════
+        // RIGHT COLUMN - TICKET CHAT / MESSAGES
+        // ═══════════════════════════════════════════════════════════════
+        FrameWidgetClass GPDA_SupportRightColumn {
+         position 0.36 0.09
+         size 0.615 0.89
+         {
+        TextWidgetClass GPDA_TicketChatLabel {
+         ignorepointer 1
+           color 0.3 0.75 0.95 0.8
+           position 0 0
+           size 1 20
+           hexactpos 0
+           vexactpos 1
+           hexactsize 0
+           vexactsize 1
+           text "CONVERSATION"
+         font "gui/fonts/metron"
+         "exact text" 1
+           "exact text size" 11
+        }
+        
+        FrameWidgetClass GPDA_TicketChatCard {
+           position 0 25
+           size 1 0.96
+           hexactpos 0
+           vexactpos 1
+           hexactsize 0
+           vexactsize 0
+         {
+          ImageWidgetClass GPDA_TicketChatBg {
+           ignorepointer 1
+             color 0.05 0.06 0.07 1
+           position 0 0
+           size 1 1
+          }
+            
+            // Messages List - takes most of the space
+          ScrollWidgetClass GPDA_TicketChatScroll {
+             position 0.02 0.02
+             size 0.96 0.82
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             style Default
+             "Scrollbar V" 1
+             {
+              WrapSpacerWidgetClass GPDA_TicketChatContent {
+               position 0 0
+               size 1 1
+               hexactpos 0
+               vexactpos 0
+               hexactsize 0
+               vexactsize 0
+              }
+             }
+          }
+            
+            // Input Area at bottom
+            FrameWidgetClass GPDA_TicketInputArea {
+             position 0.02 0.86
+             size 0.96 0.12
+             hexactpos 0
+             vexactpos 0
+             hexactsize 0
+             vexactsize 0
+             {
+          EditBoxWidgetClass GPDA_TicketChatInput {
+               position 0 0
+               size 0.78 1
+           hexactpos 0
+           vexactpos 0
+           hexactsize 0
+           vexactsize 0
+           color 0.08 0.1 0.12 1
+           font "gui/fonts/metron"
+           "text halign" left
+           "text valign" center
+           "exact text" 1
+               "exact text size" 11
+          }
+          ButtonWidgetClass GPDA_BtnSendTicketMsg {
+               color 0.2 0.65 0.85 1
+               position 0.8 0
+               size 0.2 1
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+       {
+            TextWidgetClass GPDA_BtnSendTicketMsgText {
+         ignorepointer 1
+             color 1 1 1 1
+             position 0 0
+             size 1 1
+             text "SEND"
+             font "gui/fonts/metron"
+             "exact text" 1
+                 "exact text size" 11
+             "text halign" center
+             "text valign" center
+                }
+               }
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+      
+     }
+    }
+   }
+  }
+  // ═══════════════════════════════════════════════════════════════════
+  // MARKER PANEL - top-level overlay (above all PDA content)
+  // ═══════════════════════════════════════════════════════════════════
+  FrameWidgetClass GPDA_MarkerPanel {
+   visible 0
+   position 0.3 0.35
+   size 0.4 0.25
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   {
+    ImageWidgetClass GPDA_MarkerPanelBg {
+     ignorepointer 1
+     color 0.04 0.045 0.055 0.97
+     position 0 0
+     size 1 1
+    }
+    ImageWidgetClass GPDA_MarkerPanelBorder {
+     ignorepointer 1
+     color 0.18 0.75 0.45 0.5
+     position 0 0
+     size 1 2
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 1
+    }
+    TextWidgetClass GPDA_MarkerPanelTitle {
+     ignorepointer 1
+     color 0.2 0.85 0.5 1
+     position 0.05 0.06
+     size 0.9 0.15
+     text "ADD MARKER"
+     font "gui/fonts/metron"
+     "exact text" 1
+     "exact text size" 12
+     "text valign" center
+    }
+    EditBoxWidgetClass GPDA_MarkerNameInput {
+     color 0.08 0.09 0.1 1
+     position 0.05 0.25
+     size 0.9 0.2
+     text ""
+     font "gui/fonts/metron"
+     "exact text" 1
+     "exact text size" 11
+    }
+    ButtonWidgetClass GPDA_MarkerColorRed {
+     color 0.85 0.2 0.2 1
+     position 0.05 0.52
+     size 0.15 0.16
+    }
+    ButtonWidgetClass GPDA_MarkerColorGreen {
+     color 0.2 0.8 0.3 1
+     position 0.22 0.52
+     size 0.15 0.16
+    }
+    ButtonWidgetClass GPDA_MarkerColorBlue {
+     color 0.2 0.4 0.9 1
+     position 0.39 0.52
+     size 0.15 0.16
+    }
+    ButtonWidgetClass GPDA_MarkerColorYellow {
+     color 0.95 0.85 0.2 1
+     position 0.56 0.52
+     size 0.15 0.16
+    }
+    ButtonWidgetClass GPDA_MarkerColorWhite {
+     color 0.9 0.9 0.9 1
+     position 0.73 0.52
+     size 0.15 0.16
+    }
+    ButtonWidgetClass GPDA_MarkerCreate {
+     color 0.15 0.55 0.3 1
+     position 0.05 0.76
+     size 0.42 0.2
+     {
+      TextWidgetClass GPDA_MarkerCreateText {
+       ignorepointer 1
+       color 1 1 1 1
+       position 0 0
+       size 1 1
+       text "CREATE"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 11
+       "text halign" center
+       "text valign" center
+      }
+     }
+    }
+    ButtonWidgetClass GPDA_MarkerCancel {
+     color 0.55 0.15 0.15 1
+     position 0.53 0.76
+     size 0.42 0.2
+     {
+      TextWidgetClass GPDA_MarkerCancelText {
+       ignorepointer 1
+       color 1 1 1 1
+       position 0 0
+       size 1 1
+       text "CANCEL"
+       font "gui/fonts/metron"
+       "exact text" 1
+       "exact text size" 11
+       "text halign" center
+       "text valign" center
+      }
+     }
+    }
+   }
+  }
+ }
+}
